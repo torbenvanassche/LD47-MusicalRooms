@@ -1,46 +1,56 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [InlineEditor(InlineEditorObjectFieldModes.Hidden), ShowIf(nameof(IsPlaying))]public AudioContainer audioContainer = null;
-    [SerializeField, ReadOnly, ShowIf(nameof(SourcesAlive))] private List<AudioSource> sources = new List<AudioSource>();
-    private GameObject soundSourceContainer = null;
+    [ValueDropdown(nameof(GetAudioFiles)), HorizontalGroup("PlaySound"), HideLabel, SerializeField] private AudioFileSettings selected;
+    [HorizontalGroup("PlaySound"), Button] void PlaySound()
+    {
+        PlaySound(selected);
+    }
+
+    private IEnumerable GetAudioFiles()
+    {
+        return audioContainer.data.Values;
+    }
+    
+    [Space, InlineEditor(InlineEditorObjectFieldModes.Hidden), ShowIf(nameof(IsPlaying))]public AudioContainer audioContainer = null;
+    [SerializeField, ReadOnly] private List<AudioSource> sources = new List<AudioSource>();
+    [SerializeField] private GameObject soundSourceContainer = null;
 
     private bool IsPlaying()
     {
         return !Application.isPlaying;
     }
 
-    private bool SourcesAlive()
-    {
-        return sources.Count != 0;
-    }
-    
     private void Reset()
     {
         audioContainer = AssetDatabase.LoadAssetAtPath<AudioContainer>("Assets/AudioData.asset");
     }
 
-    private void LateUpdate()
+    private AudioSource GetAvailableSource()
     {
-        //Get all sources that are currently Idle
         var notPlaying = sources.FindAll(source => !source.isPlaying);
         for (var index = 0; index < notPlaying.Count; index++)
         {
             var t = notPlaying[index];
             sources.Remove(t);
             notPlaying.Remove(t);
-            Destroy(t);
+            if (Application.isPlaying)
+            {
+                Destroy(t);   
+            }
+            else
+            {
+                DestroyImmediate(t);
+            }
         }
-    }
-
-    private AudioSource GetAvailableSource()
-    {
-        var notPlaying = sources.FindAll(source => !source.isPlaying);
         
         //if no audiosources, return a new one
         if (notPlaying.Count == 0)
@@ -68,10 +78,7 @@ public class AudioManager : MonoBehaviour
 
     public void Awake()
     {
-        soundSourceContainer = new GameObject();
-        soundSourceContainer.name = "SoundPlayer";
+        soundSourceContainer = new GameObject {name = "SoundPlayer"};
         soundSourceContainer.transform.SetParent(transform);
-        
-        PlaySound(audioContainer.Get("Wacky Waiting"));
     }
 }

@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioContainer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioContainer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioFileSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioFileSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/AudioContainerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioFileSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -57,8 +55,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioFileSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/AudioContainerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
       </list>
     </option>
   </component>
@@ -68,6 +67,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34996957" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30006087" />
     <property name="Discover.Launch.Via.Unity" value="true" />
@@ -106,6 +106,7 @@
       <workItem from="1601482743433" duration="6007000" />
       <workItem from="1601496955026" duration="9388000" />
       <workItem from="1601506817674" duration="229000" />
+      <workItem from="1601668660428" duration="3614000" />
     </task>
     <servers />
   </component>
@@ -198,5 +199,9 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1674" height="515" key="GridCell.Tab.3.right/0.0.3440.1400/-1920.17.1920.1080@0.0.3440.1400" timestamp="1601506710707" />
+    <state x="93" y="100" width="1534" height="1207" key="VCS.FileHistoryDialog" timestamp="1601671289003">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="93" y="100" width="1534" height="1207" key="VCS.FileHistoryDialog/0.0.3440.1400/-1920.17.1920.1080@0.0.3440.1400" timestamp="1601671289003" />
   </component>
 </project>
