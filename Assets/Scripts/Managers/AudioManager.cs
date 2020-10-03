@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEditor;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [ValueDropdown(nameof(GetAudioFiles)), HorizontalGroup("PlaySound"), HideLabel, SerializeField] private AudioFileSettings selected;
+    [ValueDropdown(nameof(GetAudioFiles)), HorizontalGroup("PlaySound"), HideLabel, SerializeField] private AudioFileSettings selected = null;
     [HorizontalGroup("PlaySound"), Button] void PlaySound()
     {
         PlaySound(selected);
@@ -21,8 +20,13 @@ public class AudioManager : MonoBehaviour
     }
     
     [Space, InlineEditor(InlineEditorObjectFieldModes.Hidden), ShowIf(nameof(IsPlaying))]public AudioContainer audioContainer = null;
-    [SerializeField, ReadOnly] private List<AudioSource> sources = new List<AudioSource>();
+    [SerializeField, ListDrawerSettings(HideAddButton = true, CustomRemoveElementFunction = nameof(RemoveSource))] private List<AudioSource> sources = new List<AudioSource>();
     [SerializeField] private GameObject soundSourceContainer = null;
+
+    private void RemoveSource(AudioSource a)
+    {
+        soundSourceContainer.GetComponents<AudioSource>().Where(x => x == a).ForEach(DestroySource);
+    }
 
     private bool IsPlaying()
     {
@@ -34,22 +38,28 @@ public class AudioManager : MonoBehaviour
         audioContainer = AssetDatabase.LoadAssetAtPath<AudioContainer>("Assets/AudioData.asset");
     }
 
+    private void DestroySource(AudioSource t)
+    {
+        if (Application.isPlaying)
+        {
+            Destroy(t);   
+        }
+        else
+        {
+            DestroyImmediate(t);
+        }
+        
+        sources.Remove(t);
+    }
+
     private AudioSource GetAvailableSource()
     {
         var notPlaying = sources.FindAll(source => !source.isPlaying);
         for (var index = 0; index < notPlaying.Count; index++)
         {
             var t = notPlaying[index];
-            sources.Remove(t);
             notPlaying.Remove(t);
-            if (Application.isPlaying)
-            {
-                Destroy(t);   
-            }
-            else
-            {
-                DestroyImmediate(t);
-            }
+            DestroySource(t);
         }
         
         //if no audiosources, return a new one

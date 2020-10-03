@@ -23,6 +23,6 @@ MonoBehaviour:
     SerializationNodes: []
   clip: {fileID: 8300000, guid: 814f92437c428df4aa889eb5803fee95, type: 3}
   Priority: 128
-  Volume: 0.219
+  Volume: 1
   Pitch: 1
   Loop: 0
