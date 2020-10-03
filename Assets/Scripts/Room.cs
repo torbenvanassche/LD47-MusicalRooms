@@ -11,6 +11,7 @@ public class Room : SerializedMonoBehaviour
     public Sprite defaultTile = null;
 
     public bool isCompleted = false;
+    public int noteAmount = 1;
 
     [HideInInspector] public List<GameObject> tileEntities = new List<GameObject>();
 

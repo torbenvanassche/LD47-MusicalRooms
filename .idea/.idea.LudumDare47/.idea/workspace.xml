@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/TileEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tiles/TileEvent.cs" afterDir="false" />
-    </list>
+    <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +51,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ScriptableList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioFileSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioContainer.cs" />
@@ -74,8 +67,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/RoomEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tiles/TileEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
       </list>
     </option>
   </component>
@@ -126,7 +120,7 @@
       <workItem from="1601506817674" duration="229000" />
       <workItem from="1601668660428" duration="3614000" />
       <workItem from="1601681689745" duration="1134000" />
-      <workItem from="1601713292716" duration="24752000" />
+      <workItem from="1601713292716" duration="25075000" />
     </task>
     <servers />
   </component>

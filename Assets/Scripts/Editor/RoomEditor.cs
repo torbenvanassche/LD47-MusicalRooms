@@ -2,6 +2,7 @@
 using System.Linq;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,8 +12,6 @@ public class RoomEditor : OdinEditor
     private Room r = null;
     private int count = 0;
 
-    private int noteAmount = 1;
-    
     private Vector2Int v = Vector2Int.zero;
 
     protected override void OnEnable()
@@ -26,7 +25,7 @@ public class RoomEditor : OdinEditor
     {
         base.OnInspectorGUI();
         
-        noteAmount = EditorGUILayout.IntSlider(noteAmount, 0, count);
+        r.noteAmount = EditorGUILayout.IntSlider(r.noteAmount, 0, count);
 
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Reset"))
@@ -89,6 +88,7 @@ public class RoomEditor : OdinEditor
             {
                 r.tileEntities[randomIndex].AddComponent<TileEvent>();
                 r.tileEntities[randomIndex].name = "EventTile";
+                r.tileEntities[randomIndex].GetComponent<SpriteRenderer>().color = Color.red;
             }
             else
             {
@@ -125,9 +125,11 @@ public class RoomEditor : OdinEditor
             r.tileEntities.Add(gO);
         }
         
-        for (var i = 0; i < noteAmount; i++)
+        for (var i = 0; i < r.noteAmount; i++)
         {
             Randomize();
         }
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
     }
 }
