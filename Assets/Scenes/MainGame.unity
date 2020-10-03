@@ -472,7 +472,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2029008341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf18e4ef2db9b54a9e4d6e1a9dbbb5e, type: 3}
+  m_Script: {fileID: 11500000, guid: b2ee9b8b7e9e7864ea3669b1b6820dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
@@ -485,6 +485,32 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   size: {x: 5, y: 5}
+  tiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &2029008343
 Transform:
   m_ObjectHideFlags: 0
