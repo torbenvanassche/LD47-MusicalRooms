@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -10,8 +9,10 @@ public class Room : SerializedMonoBehaviour
     [HideInInspector] public List<Texture2D> tiles = new List<Texture2D>();
     public GameObject prefab = null;
 
-    public bool isCompleted = false;
+    private bool isCompleted = false;
     [HideInInspector] public int noteAmount = 1;
+
+    public Door door = null;
 
     [HideInInspector] public List<GameObject> tileEntities = new List<GameObject>();
 
@@ -20,5 +21,10 @@ public class Room : SerializedMonoBehaviour
         isCompleted = tileEntities
             .Where(x => x.TryGetComponent<TileEvent>(out var component) && !component.completed)
             .ToList().Count == 0;
+
+        if (isCompleted)
+        {
+            door.Open();
+        }
     }
 }

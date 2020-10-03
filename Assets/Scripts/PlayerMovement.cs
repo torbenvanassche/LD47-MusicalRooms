@@ -27,28 +27,25 @@ public class PlayerMovement : MonoBehaviour
         {
             var input = context.ReadValue<Vector2>();
             moveInput = new Vector3(input.x, 0, input.y);
+
+            _player.rig.MovePosition(transform.position + moveInput);
+            if (Physics.Raycast(transform.position, Vector3.down, out var hit))
+            { 
+                Move(hit.transform.position);
+            }
         };
         Player.Controls.Player.Move.canceled += context => moveInput = Vector3.zero;
 
         if (spawnPosition)
         {
-            var pos = spawnPosition.position;
-            pos.y += GetComponent<SpriteRenderer>().size.y / 2;
-            transform.position = pos;
-        }
-    }
-    
-    public void Update()
-    {
-        if (_player.rig)
-        {
-            _moveDirection = moveInput;
-            _outDir = _moveDirection.normalized * _movementSpeed;
+            Move(spawnPosition.position);
         }
     }
 
-    public void FixedUpdate()
+    private void Move(Vector3 position)
     {
-        _player.rig.AddForce(_outDir);
+        var pos = position;
+        pos.y += GetComponent<SpriteRenderer>().size.y / 2;
+        transform.position = pos;
     }
 }

@@ -153,8 +153,9 @@ public class RoomEditor : OdinEditor
             Randomize();
         }
 
-        #if UNITY_EDITOR
-        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
-        #endif
+        if (!Application.isPlaying)
+        {
+            EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());   
+        }
     }
 }
