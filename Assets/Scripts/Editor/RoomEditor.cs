@@ -9,31 +9,42 @@ public class RoomEditor : OdinEditor
     private Room r = null;
     private int count = 0;
     
-    private void OnEnable()
+    private Vector2Int v = Vector2Int.zero;
+
+    protected override void OnEnable()
     {
         r = target as Room;
-        count = r.size.x * r.size.y;
-        
-        while (count > r.tiles.Count)
-        {
-            r.tiles.Add(null);
-        }
+        v = r.size;
+        count = v.x * v.y;
     }
 
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
+        if (GUILayout.Button("Reset"))
+        {
+            r.tiles.Clear();
+            
+            v = r.size;
+            count = v.x * v.y;
+            while (count > r.tiles.Count)
+            {
+                r.tiles.Add(null);
+            }
+        }
+
         var width = Screen.width - 50;
         
         for (var i = 0; i < count; i++)
         {
-            if (i % 5 == 0) GUILayout.BeginHorizontal();
+            Debug.Log(v.x);
+            if (i % v.x == 0) GUILayout.BeginHorizontal();
 
             r.tiles[i] = EditorGUILayout.ObjectField(r.tiles[i], typeof(RoomTile), false,
-                GUILayout.Height(width / 5), GUILayout.Width(width / 5)) as RoomTile;
+                GUILayout.Height(Mathf.Floor(width / (float)v.x)), GUILayout.Width(Mathf.Floor(width / (float)v.x))) as RoomTile;
             
-            if (i % 5 == 4) GUILayout.EndHorizontal();
+            if (i % v.x == v.x - 1) GUILayout.EndHorizontal();
         }
     }
 }
