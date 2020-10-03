@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
@@ -38,13 +39,41 @@ public class RoomEditor : OdinEditor
         
         for (var i = 0; i < count; i++)
         {
-            Debug.Log(v.x);
             if (i % v.x == 0) GUILayout.BeginHorizontal();
 
-            r.tiles[i] = EditorGUILayout.ObjectField(r.tiles[i], typeof(RoomTile), false,
-                GUILayout.Height(Mathf.Floor(width / (float)v.x)), GUILayout.Width(Mathf.Floor(width / (float)v.x))) as RoomTile;
+            r.tiles[i] = EditorGUILayout.ObjectField(r.tiles[i], typeof(Sprite), false,
+                GUILayout.Height(Mathf.Floor(width / (float)v.x)), GUILayout.Width(Mathf.Floor(width / (float)v.x))) as Sprite;
             
             if (i % v.x == v.x - 1) GUILayout.EndHorizontal();
+        }
+        
+        if (GUILayout.Button("Regenerate"))
+        {
+            Regenerate();
+        }
+    }
+
+    private void Regenerate()
+    {
+        foreach (var tileEntity in r.tileEntities)
+        {
+            DestroyImmediate(tileEntity);
+        }
+
+        r.tileEntities.Clear();
+
+        for (var index = 0; index < r.tiles.Count; index++)
+        {
+            var rTile = r.tiles[index];
+            
+            var gO = new GameObject();
+            var sprite = gO.AddComponent<SpriteRenderer>().sprite;
+            sprite = rTile;
+            gO.transform.SetParent(r.transform);
+            gO.transform.Translate(sprite.bounds.size.x * (index % v.x), -sprite.bounds.size.y * (index / v.x), 0);
+            gO.AddComponent<TileEvent>();
+            
+            r.tileEntities.Add(gO);
         }
     }
 }

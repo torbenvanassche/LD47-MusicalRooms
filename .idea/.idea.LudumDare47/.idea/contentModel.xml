@@ -48,10 +48,10 @@
           <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Room.cs" t="Include" />
-          <e p="RoomTile.cs" t="Include" />
           <e p="TileFunctions.cs" t="Include" />
           <e p="Tiles" t="Include">
             <e p="RoomTileContainer.cs" t="Include" />
+            <e p="TileEvent.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
             <e p="Extensions.cs" t="Include" />

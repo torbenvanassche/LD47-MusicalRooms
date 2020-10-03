@@ -7,9 +7,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Container/Sprites", fileName = "RoomTileContainer")]
 public class RoomTileContainer : SerializedScriptableObject
 {
-    public Dictionary<string, RoomTile> data = new Dictionary<string, RoomTile>();
+    public Dictionary<string, Sprite> data = new Dictionary<string, Sprite>();
 
-    public RoomTile Get(string key)
+    public Sprite Get(string key)
     {
         return data.TryGetValue(key, out var clip) ? clip : null;
     }

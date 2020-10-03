@@ -6,10 +6,7 @@ using UnityEngine;
 public class Room : SerializedMonoBehaviour
 {
     public Vector2Int size = new Vector2Int(5, 5);
-    [HideInInspector] public List<RoomTile> tiles = new List<RoomTile>();
+    [HideInInspector] public List<Sprite> tiles = new List<Sprite>();
 
-    public void Start()
-    {
-        tiles[0].triggered.Invoke();
-    }
+    public List<GameObject> tileEntities = new List<GameObject>();
 }
