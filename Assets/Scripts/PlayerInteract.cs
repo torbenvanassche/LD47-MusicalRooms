@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -22,6 +20,7 @@ public class PlayerInteract : MonoBehaviour
                 if (hit.transform.gameObject.TryGetComponent<TileEvent>(out var tileEvent))
                 {
                     tileEvent.action.Invoke();
+                    Manager.Instance.CurrentRoom.IsCompleted();
                 }
             }
         };

@@ -6,6 +6,7 @@ using Utilities;
 public class Manager : Singleton<Manager>
 {
     [NonSerialized] public AudioManager _audio = null;
+    public Room CurrentRoom = null;
     
     private void Awake()
     {
