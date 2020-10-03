@@ -7,8 +7,8 @@ using UnityEngine;
 public class Room : SerializedMonoBehaviour
 {
     public Vector2Int size = new Vector2Int(5, 5);
-    [HideInInspector] public List<Sprite> tiles = new List<Sprite>();
-    public Sprite defaultTile = null;
+    [HideInInspector] public List<Texture2D> tiles = new List<Texture2D>();
+    public GameObject prefab = null;
 
     public bool isCompleted = false;
     [HideInInspector] public int noteAmount = 1;

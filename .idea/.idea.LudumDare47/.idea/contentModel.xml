@@ -39,13 +39,11 @@
             <e p="AudioContainerEditor.cs" t="Include" />
             <e p="RoomContainerEditor.cs" t="Include" />
             <e p="RoomEditor.cs" t="Include" />
-            <e p="RoomManagerEditor.cs" t="Include" />
           </e>
           <e p="InputSettings.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="Manager.cs" t="Include" />
-            <e p="RoomManager.cs" t="Include" />
             <e p="SceneManagement.cs" t="Include" />
           </e>
           <e p="Player.cs" t="Include" />

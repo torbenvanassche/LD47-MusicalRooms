@@ -50,7 +50,7 @@ public class RoomEditor : OdinEditor
         
         if (GUILayout.Button("Populate"))
         {
-            if (r.defaultTile)
+            if (r.prefab)
             {
                 var emptySprites = r.tiles.Where(x => x == null).ToArray();
 
@@ -58,7 +58,7 @@ public class RoomEditor : OdinEditor
                 {
                     if (!r.tiles[index])
                     {
-                        r.tiles[index] = r.defaultTile;
+                        r.tiles[index] = r.prefab.GetComponent<MeshRenderer>().sharedMaterial.mainTexture as Texture2D;
                     }
                 }
             }
@@ -74,7 +74,7 @@ public class RoomEditor : OdinEditor
             if (i % v.x == 0) GUILayout.BeginHorizontal();
 
             r.tiles[i] = EditorGUILayout.ObjectField(r.tiles[i], typeof(Sprite), false,
-                GUILayout.Height(Mathf.Floor(width / (float)v.x)), GUILayout.Width(Mathf.Floor(width / (float)v.x))) as Sprite;
+                GUILayout.Height(Mathf.Floor(width / (float)v.x)), GUILayout.Width(Mathf.Floor(width / (float)v.x))) as Texture2D;
             
             if (i % v.x == v.x - 1) GUILayout.EndHorizontal();
         }
@@ -99,7 +99,8 @@ public class RoomEditor : OdinEditor
             {
                 r.tileEntities[randomIndex].AddComponent<TileEvent>();
                 r.tileEntities[randomIndex].name = "EventTile";
-                r.tileEntities[randomIndex].GetComponent<SpriteRenderer>().color = Color.red;
+                r.tileEntities[randomIndex].GetComponent<MeshRenderer>().sharedMaterial =
+                    AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/EventTile.mat");
             }
             else
             {
@@ -129,16 +130,20 @@ public class RoomEditor : OdinEditor
             var rTile = r.tiles[index];
 
             if (!rTile) continue;
-            
-            var gO = new GameObject();
-            var sprite = gO.AddComponent<SpriteRenderer>();
-            sprite.sprite = rTile;
+
+            var gO = Instantiate(r.prefab);
+            var ren = gO.GetComponent<MeshRenderer>();
+
             gO.transform.SetParent(r.transform);
             gO.transform.localScale = Vector3.one;
-            gO.transform.Translate(sprite.bounds.size.x * (index % v.x), -sprite.bounds.size.y * (index / v.x), 0);
-            var collider = gO.AddComponent<BoxCollider>();
-            collider.isTrigger = true;
-            gO.name = sprite.sprite.name;
+            gO.transform.Translate(ren.bounds.size.x * (index % v.x), -ren.bounds.size.z * (index / v.x), 0);
+            gO.transform.LookAt(gO.transform.position + Vector3.down);
+            gO.name = "Ground";
+
+            var collider = gO.GetComponent<BoxCollider>();
+            collider.center = new Vector3(collider.center.x, collider.center.y, 0.05f); 
+            collider.size = new Vector3(collider.size.x, collider.size.y, 0.1f); 
+            
 
             r.tileEntities.Add(gO);
         }
@@ -148,6 +153,8 @@ public class RoomEditor : OdinEditor
             Randomize();
         }
 
+        #if UNITY_EDITOR
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+        #endif
     }
 }
