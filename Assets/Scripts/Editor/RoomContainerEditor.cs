@@ -9,10 +9,6 @@ public class RoomContainerEditor : OdinEditor
 {
     protected override void OnEnable()
     {
-        //Create folder if it doesnt exist
-        var folderPath = "Assets/Sprites/Containers";
-        if (!AssetDatabase.IsValidFolder(folderPath)) AssetDatabase.CreateFolder("Assets/Sprites", "Containers");
-        
         var t = target as RoomTileContainer;
 
         var clips = AssetDatabase.FindAssets($"t:{nameof(Sprite)}", new[] {"Assets/Sprites/Source"});
@@ -28,14 +24,9 @@ public class RoomContainerEditor : OdinEditor
         {
             var path = AssetDatabase.GUIDToAssetPath(clip);
             var container = AssetDatabase.LoadAssetAtPath<Sprite>(path);
-            if (t.data.All(pair => pair.Value.tile != container))
+            if (t.data.All(pair => pair.Value != container))
             {
-                var settings = CreateInstance<RoomTile>();
-                settings.name = container.name;
-                settings.tile = container;
-
-                AssetDatabase.CreateAsset(settings, $"Assets/Sprites/Containers/{settings.name}.asset");
-                t.data.Add(settings.name, settings);
+                t.data.Add(container.name, container);
             }
         }
     }

@@ -1,16 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(CircleCollider2D))]
+[RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(CapsuleCollider))]
 public class Player : MonoBehaviour
 {
     public static InputSettings Controls;
 
-    [HideInInspector] public Rigidbody2D rig = null;
+    [HideInInspector] public Rigidbody rig = null;
 
     void Awake()
     {
-        rig = GetComponent<Rigidbody2D>();
+        rig = GetComponent<Rigidbody>();
         Controls = new InputSettings();
     }
 

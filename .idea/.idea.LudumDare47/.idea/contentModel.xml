@@ -39,19 +39,23 @@
             <e p="AudioContainerEditor.cs" t="Include" />
             <e p="RoomContainerEditor.cs" t="Include" />
             <e p="RoomEditor.cs" t="Include" />
+            <e p="RoomManagerEditor.cs" t="Include" />
           </e>
           <e p="InputSettings.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="Manager.cs" t="Include" />
+            <e p="RoomManager.cs" t="Include" />
+            <e p="SceneManagement.cs" t="Include" />
           </e>
           <e p="Player.cs" t="Include" />
+          <e p="PlayerInteract.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
-          <e p="Room.cs" t="Include" />
-          <e p="RoomTile.cs" t="Include" />
-          <e p="TileFunctions.cs" t="Include" />
           <e p="Tiles" t="Include">
+            <e p="Room.cs" t="Include" />
             <e p="RoomTileContainer.cs" t="Include" />
+            <e p="TileEvent.cs" t="Include" />
+            <e p="TileFunctions.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
             <e p="Extensions.cs" t="Include" />
