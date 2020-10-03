@@ -29,11 +29,6 @@ public class PlayerMovement : MonoBehaviour
             moveInput = context.ReadValue<Vector2>();
         };
         Player.Controls.Player.Move.canceled += context => moveInput = Vector2.zero;
-
-        Player.Controls.Player.Interact.performed += context =>
-        {
-            Debug.Log(context);
-        };
     }
     
     public void Update()

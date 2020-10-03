@@ -7,6 +7,7 @@ public class Room : SerializedMonoBehaviour
 {
     public Vector2Int size = new Vector2Int(5, 5);
     [HideInInspector] public List<Sprite> tiles = new List<Sprite>();
+    public Sprite defaultTile = null;
 
-    public List<GameObject> tileEntities = new List<GameObject>();
+    [HideInInspector] public List<GameObject> tileEntities = new List<GameObject>();
 }

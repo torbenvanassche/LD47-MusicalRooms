@@ -3,12 +3,15 @@ using System.Linq;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [CustomEditor(typeof(Room))]
 public class RoomEditor : OdinEditor
 {
     private Room r = null;
     private int count = 0;
+
+    private int noteAmount = 1;
     
     private Vector2Int v = Vector2Int.zero;
 
@@ -22,7 +25,10 @@ public class RoomEditor : OdinEditor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
+        
+        noteAmount = EditorGUILayout.IntSlider(noteAmount, 0, count);
 
+        GUILayout.BeginHorizontal();
         if (GUILayout.Button("Reset"))
         {
             r.tiles.Clear();
@@ -34,6 +40,25 @@ public class RoomEditor : OdinEditor
                 r.tiles.Add(null);
             }
         }
+        
+        if (GUILayout.Button("Populate"))
+        {
+            if (r.defaultTile)
+            {
+                var emptySprites = r.tiles.Where(x => x == null).ToArray();
+
+                for (var index = 0; index < r.tiles.Count; index++)
+                {
+                    if (!r.tiles[index])
+                    {
+                        r.tiles[index] = r.defaultTile;
+                    }
+                }
+            }
+        }
+        
+        GUILayout.EndHorizontal();
+
 
         var width = Screen.width - 50;
         
@@ -53,6 +78,27 @@ public class RoomEditor : OdinEditor
         }
     }
 
+    private void Randomize()
+    {
+        while (true)
+        {
+            var randomIndex = Random.Range(0, count);
+            var tile = r.tileEntities[randomIndex].GetComponent<TileEvent>();
+
+            if (!tile)
+            {
+                r.tileEntities[randomIndex].AddComponent<TileEvent>();
+                r.tileEntities[randomIndex].name = "EventTile";
+            }
+            else
+            {
+                continue;
+            }
+
+            break;
+        }
+    }
+
     private void Regenerate()
     {
         foreach (var tileEntity in r.tileEntities)
@@ -67,13 +113,21 @@ public class RoomEditor : OdinEditor
             var rTile = r.tiles[index];
             
             var gO = new GameObject();
-            var sprite = gO.AddComponent<SpriteRenderer>().sprite;
-            sprite = rTile;
+            var sprite = gO.AddComponent<SpriteRenderer>();
+            sprite.sprite = rTile;
             gO.transform.SetParent(r.transform);
+            gO.transform.localScale = Vector3.one;
             gO.transform.Translate(sprite.bounds.size.x * (index % v.x), -sprite.bounds.size.y * (index / v.x), 0);
-            gO.AddComponent<TileEvent>();
-            
+            var collider = gO.AddComponent<BoxCollider>();
+            collider.isTrigger = true;
+            gO.name = sprite.sprite.name;
+
             r.tileEntities.Add(gO);
+        }
+        
+        for (var i = 0; i < noteAmount; i++)
+        {
+            Randomize();
         }
     }
 }
