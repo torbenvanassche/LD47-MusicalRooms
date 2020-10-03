@@ -4,6 +4,7 @@ using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 [CustomEditor(typeof(Room))]
@@ -130,6 +131,6 @@ public class RoomEditor : OdinEditor
             Randomize();
         }
 
-        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
     }
 }
