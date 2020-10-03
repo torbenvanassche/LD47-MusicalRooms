@@ -33,6 +33,13 @@ public class RoomEditor : OdinEditor
         {
             r.tiles.Clear();
             
+            foreach (var tileEntity in r.tileEntities)
+            {
+                DestroyImmediate(tileEntity);
+            }
+
+            r.tileEntities.Clear();
+            
             v = r.size;
             count = v.x * v.y;
             while (count > r.tiles.Count)
@@ -82,7 +89,10 @@ public class RoomEditor : OdinEditor
     {
         while (true)
         {
-            var randomIndex = Random.Range(0, count);
+            var randomIndex = Random.Range(0, r.tileEntities.Count);
+
+            if (!r.tileEntities[randomIndex]) continue;
+            
             var tile = r.tileEntities[randomIndex].GetComponent<TileEvent>();
 
             if (!tile)
@@ -102,7 +112,12 @@ public class RoomEditor : OdinEditor
 
     private void Regenerate()
     {
-        foreach (var tileEntity in r.tileEntities)
+        if (r.tiles.All(x => x == null))
+        {
+            return;
+        }
+        
+        foreach (var tileEntity in r.tileEntities.Where(tileEntity => tileEntity))
         {
             DestroyImmediate(tileEntity);
         }
@@ -112,6 +127,8 @@ public class RoomEditor : OdinEditor
         for (var index = 0; index < r.tiles.Count; index++)
         {
             var rTile = r.tiles[index];
+
+            if (!rTile) continue;
             
             var gO = new GameObject();
             var sprite = gO.AddComponent<SpriteRenderer>();
