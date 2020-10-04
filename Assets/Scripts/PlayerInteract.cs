@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -15,7 +16,7 @@ public class PlayerInteract : MonoBehaviour
 
         Player.Controls.Player.Interact.performed += context =>
         {
-            if (Physics.Raycast(transform.position, transform.forward, out var hit))
+            if (Physics.Raycast(transform.position, Vector3.down, out var hit))
             {
                 if (hit.transform.gameObject.TryGetComponent<TileEvent>(out var tileEvent))
                 {
@@ -24,5 +25,10 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
         };
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position - transform.up);
     }
 }

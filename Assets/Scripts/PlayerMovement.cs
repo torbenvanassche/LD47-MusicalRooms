@@ -4,17 +4,16 @@ using UnityEngine;
 [RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector2 moveInput;
-
-    private Vector2 _moveDirection;
-    private Vector2 _moveForce;
+    private Vector3 moveInput;
+    private Vector3 _moveDirection;
+    private Vector3 _moveForce;
     
     [SerializeField] private float _movementSpeed = 10f;
-
-    private Quaternion _lastRotation;
-    private Vector2 _outDir = Vector3.zero;
+    private Vector3 _outDir = Vector3.zero;
 
     private Player _player = null;
+
+    [SerializeField] private Transform spawnPosition = null;
 
     IEnumerator Start()
     {
@@ -26,22 +25,27 @@ public class PlayerMovement : MonoBehaviour
         
         Player.Controls.Player.Move.performed += context =>
         {
-            moveInput = context.ReadValue<Vector2>();
+            var input = context.ReadValue<Vector2>();
+            moveInput = new Vector3(input.x, 0, input.y);
+
+            _player.rig.MovePosition(transform.position + moveInput);
+            if (Physics.Raycast(transform.position, Vector3.down, out var hit))
+            { 
+                Move(hit.transform.position);
+            }
         };
-        Player.Controls.Player.Move.canceled += context => moveInput = Vector2.zero;
-    }
-    
-    public void Update()
-    {
-        if (_player.rig)
+        Player.Controls.Player.Move.canceled += context => moveInput = Vector3.zero;
+
+        if (spawnPosition)
         {
-            _moveDirection = moveInput;
-            _outDir = _moveDirection.normalized * _movementSpeed;
+            Move(spawnPosition.position);
         }
     }
 
-    public void FixedUpdate()
+    private void Move(Vector3 position)
     {
-        _player.rig.AddForce(_outDir);
+        var pos = position;
+        pos.y += GetComponent<SpriteRenderer>().size.y / 2;
+        transform.position = pos;
     }
 }
