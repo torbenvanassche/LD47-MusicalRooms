@@ -5,13 +5,17 @@ using Utilities;
 [RequireComponent(typeof(AudioManager)), RequireComponent(typeof(SceneManagement))]
 public class Manager : Singleton<Manager>
 {
-    [NonSerialized] public AudioManager _audio = null;
+    public AudioManager _audio = null;
     public Room CurrentRoom = null;
-    public Camera camera = null;
-    
+    [HideInInspector] public Camera camera = null;
+
     private void Awake()
     {
-        _audio = GetComponent<AudioManager>();
         camera = Camera.main;
+    }
+
+    private void Reset()
+    {
+        _audio = GetComponent<AudioManager>();
     }
 }

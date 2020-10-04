@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d745f7e6ffdce184c9623bdb297a9e17, type: 3}
+  m_Name: WalkRight
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  data:
+  - {fileID: 2640158203023039555, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: -5242295520084223217, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: -6055114301136879078, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: 5367439154239357092, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: 5115609057877513032, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: -5030549075768200, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: -4736825333441249807, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  - {fileID: 6207956270870711180, guid: e7db3c236a612dc42ab6dd7d0ac69264, type: 3}
+  animationSpeed: 0.15

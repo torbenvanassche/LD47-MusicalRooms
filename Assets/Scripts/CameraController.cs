@@ -27,6 +27,7 @@ public class CameraController : MonoBehaviour
 
         Player.Controls.Player.MouseRight.performed += context =>
         {
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         };
         

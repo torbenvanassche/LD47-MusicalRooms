@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d745f7e6ffdce184c9623bdb297a9e17, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  data:
+  - {fileID: -3145328045451892686, guid: e2858c198f3a48c4db93b1489aea2703, type: 3}
+  - {fileID: -6552843917330368855, guid: e2858c198f3a48c4db93b1489aea2703, type: 3}
+  - {fileID: 7309844833446704383, guid: e2858c198f3a48c4db93b1489aea2703, type: 3}
+  - {fileID: -1701584443341091289, guid: e2858c198f3a48c4db93b1489aea2703, type: 3}
+  - {fileID: 4619437029804489033, guid: e2858c198f3a48c4db93b1489aea2703, type: 3}
+  animationSpeed: 0.15

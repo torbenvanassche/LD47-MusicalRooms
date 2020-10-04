@@ -1,15 +1,32 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class TileEvent : MonoBehaviour
 {
+    [SerializeField, ValueDropdown(nameof(GetAudioFiles))] private AudioFileSettings _audioFile = null;
     public UnityEvent action = null;
-    public bool completed = false;
+    [HideInInspector] public bool completed = false;
 
+    private IEnumerable GetAudioFiles()
+    {
+        return Manager.Instance._audio ? Manager.Instance._audio.audioContainer.data.Values : null;
+    }
+    
     public void SetCompleted()
     {
         completed = true;
+    }
+
+    private void Start()
+    {
+        action.AddListener(() =>
+        {
+            if (_audioFile && Manager.Instance._audio)
+            {
+                Manager.Instance._audio.PlaySound(_audioFile);
+            }
+        });
     }
 }

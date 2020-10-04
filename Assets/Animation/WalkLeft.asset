@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d745f7e6ffdce184c9623bdb297a9e17, type: 3}
+  m_Name: WalkLeft
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  data:
+  - {fileID: -1259519183140205466, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: -5391052288343786302, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: -5026184135150652655, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: -3549065986036199864, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: -9140556688242365290, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: -2565765550704034298, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: -6489555440313164636, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  - {fileID: 5719942148901561386, guid: 18788e48dbce9114abe5f50473728daf, type: 3}
+  animationSpeed: 0.15

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
@@ -14,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private Player _player = null;
 
     [SerializeField] private Transform spawnPosition = null;
+    
+    private Quaternion _lastRotation;
+    [SerializeField] private float _rotationSpeed = 5f;
+
+    private GameObject target = null;
 
     IEnumerator Start()
     {
@@ -27,12 +33,6 @@ public class PlayerMovement : MonoBehaviour
         {
             var input = context.ReadValue<Vector2>();
             moveInput = new Vector3(input.x, 0, input.y);
-
-            _player.rig.MovePosition(transform.position + moveInput);
-            if (Physics.Raycast(transform.position, Vector3.down, out var hit))
-            { 
-                Move(hit.transform.position);
-            }
         };
         Player.Controls.Player.Move.canceled += context => moveInput = Vector3.zero;
 
@@ -40,6 +40,38 @@ public class PlayerMovement : MonoBehaviour
         {
             Move(spawnPosition.position);
         }
+        
+        target = new GameObject();
+    }
+    
+    public void Update()
+    {
+        if (_player.rig)
+        {
+            _moveDirection = Manager.Instance.camera.transform.rotation * moveInput;
+            _moveDirection.y = 0;
+
+            _outDir = _moveDirection.normalized;
+            
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lastRotation, Time.deltaTime * _rotationSpeed);
+
+            //add move speed
+            _outDir *= _movementSpeed;
+
+            if (target)
+            {
+                var cameraPosition = Manager.Instance.camera.transform.position;
+                cameraPosition.y = transform.position.y;
+                target.transform.position = cameraPosition;
+            
+                transform.LookAt(target.transform);
+            }
+        }
+    }
+
+    public void FixedUpdate()
+    {
+        _player.rig.AddForce(_outDir);
     }
 
     private void Move(Vector3 position)
