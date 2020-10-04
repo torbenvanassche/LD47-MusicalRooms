@@ -636,10 +636,6 @@ MonoBehaviour:
   - {fileID: 1222324193}
   - {fileID: 102557493}
   - {fileID: 2063955042}
-  tileClickAnimation:
-  - {fileID: 2800000, guid: eb9749f2c5869dd4fba8fee380340f6a, type: 3}
-  - {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-  highlightDuration: 1
 --- !u!1 &102557493
 GameObject:
   m_ObjectHideFlags: 0
@@ -3431,14 +3427,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioFile: {fileID: 0}
+  highlightDuration: 1
   action:
     m_PersistentCalls:
       m_Calls: []
   completed: 0
-  tileClickAnimation:
-  - {fileID: 2800000, guid: eb9749f2c5869dd4fba8fee380340f6a, type: 3}
-  - {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-  highlightDuration: 1
 --- !u!65 &413437638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4457,14 +4450,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioFile: {fileID: 0}
+  highlightDuration: 1
   action:
     m_PersistentCalls:
       m_Calls: []
   completed: 0
-  tileClickAnimation:
-  - {fileID: 2800000, guid: eb9749f2c5869dd4fba8fee380340f6a, type: 3}
-  - {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-  highlightDuration: 1
 --- !u!65 &621923719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10763,26 +10753,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioFile: {fileID: 11400000, guid: 8a3e13abf3d3add4bb7e401161262d89, type: 2}
+  highlightDuration: 1
   action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1729422492}
         m_TargetAssemblyTypeName: TileEvent, Assembly-CSharp
-        m_MethodName: SetCompleted
-        m_Mode: 1
+        m_MethodName: ChangeMaterial
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   completed: 0
-  tileClickAnimation:
-  - {fileID: 2800000, guid: eb9749f2c5869dd4fba8fee380340f6a, type: 3}
-  - {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-  highlightDuration: 1
 --- !u!65 &1729422493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12477,26 +12464,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioFile: {fileID: 11400000, guid: f5d4fc452d3524c44ad371136be89c11, type: 2}
+  highlightDuration: 1
   action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1989074616}
         m_TargetAssemblyTypeName: TileEvent, Assembly-CSharp
-        m_MethodName: SetCompleted
-        m_Mode: 1
+        m_MethodName: ChangeMaterial
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   completed: 0
-  tileClickAnimation:
-  - {fileID: 2800000, guid: eb9749f2c5869dd4fba8fee380340f6a, type: 3}
-  - {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-  highlightDuration: 1
 --- !u!65 &1989074617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12843,10 +12827,6 @@ MonoBehaviour:
   - {fileID: 1943285880}
   - {fileID: 354825504}
   - {fileID: 320118635}
-  tileClickAnimation:
-  - {fileID: 2800000, guid: eb9749f2c5869dd4fba8fee380340f6a, type: 3}
-  - {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-  highlightDuration: 1
 --- !u!4 &2029008343
 Transform:
   m_ObjectHideFlags: 0

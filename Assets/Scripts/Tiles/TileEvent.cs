@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,11 +6,11 @@ using UnityEngine.Events;
 public class TileEvent : MonoBehaviour
 {
     [SerializeField, ValueDropdown(nameof(GetAudioFiles))] private AudioFileSettings _audioFile = null;
+    public float highlightDuration = 1;
 
     public UnityEvent action = new UnityEvent();
     [HideInInspector] public bool completed = false;
-    [HideInInspector] public List<Texture2D> tileClickAnimation = new List<Texture2D>();
-    public float highlightDuration = 1;
+    private Texture2D defaultTexture;
 
     private IEnumerable GetAudioFiles()
     {
@@ -31,19 +30,24 @@ public class TileEvent : MonoBehaviour
             {
                 Manager.Instance._audio.PlaySound(_audioFile);
             }
-
-            gameObject.GetComponent<MeshRenderer>().material.mainTexture = tileClickAnimation[1];
-            if (highlightDuration != 0)
-            {
-                StartCoroutine(nameof(ResetMaterial), highlightDuration);   
-            }
         });
+
+        defaultTexture = GetComponent<MeshRenderer>().material.mainTexture as Texture2D;
+    }
+
+    public void ChangeMaterial(Texture2D tex)
+    {
+        gameObject.GetComponent<MeshRenderer>().material.mainTexture = tex;
+        if (highlightDuration != 0)
+        {
+            StartCoroutine(nameof(ResetMaterial), highlightDuration);   
+        }
     }
 
     private IEnumerator ResetMaterial(float f)
     {
         yield return new WaitForSeconds(f);
-        GetComponent<MeshRenderer>().material.mainTexture = tileClickAnimation[0];
+        GetComponent<MeshRenderer>().material.mainTexture = defaultTexture;
         yield return null;
     }
 }

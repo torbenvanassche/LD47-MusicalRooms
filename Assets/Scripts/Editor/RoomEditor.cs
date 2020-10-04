@@ -96,8 +96,6 @@ public class RoomEditor : OdinEditor
 
             var ren = r.tileEntities[randomIndex].GetComponent<MeshRenderer>();
             ren.sharedMaterial = AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/EventTile.mat");
-            ren.sharedMaterial.mainTexture = r.tileClickAnimation[0];
-            tileEvent.tileClickAnimation = r.tileClickAnimation;
             break;
         }
     }

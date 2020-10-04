@@ -15,9 +15,6 @@ public class Room : SerializedMonoBehaviour
     public Door door = null;
 
     [HideInInspector] public List<GameObject> tileEntities = new List<GameObject>();
-    
-    public List<Texture2D> tileClickAnimation = new List<Texture2D>();
-    public float highlightDuration = 1;
 
     public void IsCompleted()
     {
