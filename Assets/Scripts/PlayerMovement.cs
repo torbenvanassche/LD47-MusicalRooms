@@ -34,7 +34,11 @@ public class PlayerMovement : MonoBehaviour
             var input = context.ReadValue<Vector2>();
             moveInput = new Vector3(input.x, 0, input.y);
         };
-        Player.Controls.Player.Move.canceled += context => moveInput = Vector3.zero;
+        Player.Controls.Player.Move.canceled += context =>
+        {
+            moveInput = Vector3.zero;
+            _player.rig.velocity = moveInput;
+        };
 
         if (spawnPosition)
         {
