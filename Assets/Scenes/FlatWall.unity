@@ -10690,7 +10690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioFile: {fileID: 0}
+  _audioFile: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -11939,7 +11939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioFile: {fileID: 0}
+  _audioFile: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
   highlightDuration: 1
   action:
     m_PersistentCalls:
