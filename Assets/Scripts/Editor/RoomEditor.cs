@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -90,23 +89,15 @@ public class RoomEditor : OdinEditor
         while (true)
         {
             var randomIndex = Random.Range(0, r.tileEntities.Count);
-
-            if (!r.tileEntities[randomIndex]) continue;
+            if (!r.tileEntities[randomIndex] ||  r.tileEntities[randomIndex].GetComponent<TileEvent>()) continue;
             
-            var tile = r.tileEntities[randomIndex].GetComponent<TileEvent>();
+            var tileEvent = r.tileEntities[randomIndex].AddComponent<TileEvent>();
+            r.tileEntities[randomIndex].name = "EventTile";
 
-            if (!tile)
-            {
-                r.tileEntities[randomIndex].AddComponent<TileEvent>();
-                r.tileEntities[randomIndex].name = "EventTile";
-                r.tileEntities[randomIndex].GetComponent<MeshRenderer>().sharedMaterial =
-                    AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/EventTile.mat");
-            }
-            else
-            {
-                continue;
-            }
-
+            var ren = r.tileEntities[randomIndex].GetComponent<MeshRenderer>();
+            ren.sharedMaterial = AssetDatabase.LoadAssetAtPath<Material>("Assets/Materials/EventTile.mat");
+            ren.sharedMaterial.mainTexture = r.tileClickAnimation[0];
+            tileEvent.tileClickAnimation = r.tileClickAnimation;
             break;
         }
     }
@@ -142,8 +133,7 @@ public class RoomEditor : OdinEditor
 
             var collider = gO.GetComponent<BoxCollider>();
             collider.center = new Vector3(collider.center.x, collider.center.y, 0.05f); 
-            collider.size = new Vector3(collider.size.x, collider.size.y, 0.1f); 
-            
+            collider.size = new Vector3(collider.size.x, collider.size.y, 0.1f);
 
             r.tileEntities.Add(gO);
         }
