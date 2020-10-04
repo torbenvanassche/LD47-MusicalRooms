@@ -103,10 +103,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpriteAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Manager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tiles/TileEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tiles/TileEvent.cs" />
       </list>
     </option>
   </component>
@@ -159,7 +159,7 @@
       <workItem from="1601668660428" duration="3614000" />
       <workItem from="1601681689745" duration="1134000" />
       <workItem from="1601713292716" duration="38614000" />
-      <workItem from="1601799974431" duration="8073000" />
+      <workItem from="1601799974431" duration="8442000" />
     </task>
     <servers />
   </component>
