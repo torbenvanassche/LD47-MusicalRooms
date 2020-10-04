@@ -14,14 +14,13 @@ public class Room : SerializedMonoBehaviour
 
     private bool isCompleted = false;
     
-    public List<GameObject> tileEntities = new List<GameObject>();
     [HideInInspector] public List<Texture2D> tiles = new List<Texture2D>();
     [HideInInspector] public int noteAmount = 1;
 
     public void IsCompleted()
     {
-        isCompleted = tileEntities
-            .Where(x => x.TryGetComponent<TileEvent>(out var component) && !component.completed)
+        isCompleted = transform.GetComponentsInChildren<TileEvent>()
+            .Where(x => !x.completed)
             .ToList().Count == 0;
 
         if (isCompleted)
@@ -34,9 +33,7 @@ public class Room : SerializedMonoBehaviour
     //Generate room
     public void DestroyRoom()
     {
-        foreach (var tileEntity in tileEntities) DestroyImmediate(tileEntity);
-        
-        tileEntities.Clear();
+        foreach (Transform tileEntity in transform) DestroyImmediate(tileEntity);
         tiles.Clear();
         
         while (size.x * size.y > tiles.Count)
@@ -63,12 +60,12 @@ public class Room : SerializedMonoBehaviour
     {
         while (true)
         {
-            var randomIndex = Random.Range(0, tileEntities.Count);
-            if (!tileEntities[randomIndex] ||  tileEntities[randomIndex].GetComponent<TileEvent>()) continue;
+            var randomIndex = Random.Range(0, transform.childCount);
+            if (!transform.GetChild(randomIndex) ||  transform.GetChild(randomIndex).GetComponent<TileEvent>()) continue;
             
-            tileEntities[randomIndex].AddComponent<TileEvent>();
-            tileEntities[randomIndex].name = "EventTile";
-            tileEntities[randomIndex].GetComponent<MeshRenderer>().sharedMaterial = interactableMaterial;
+            transform.GetChild(randomIndex).gameObject.AddComponent<TileEvent>();
+            transform.GetChild(randomIndex).gameObject.name = "EventTile";
+            transform.GetChild(randomIndex).gameObject.GetComponent<MeshRenderer>().sharedMaterial = interactableMaterial;
             break;
         }
     }
@@ -76,13 +73,10 @@ public class Room : SerializedMonoBehaviour
     public void Regenerate()
     {
         if (tiles.All(x => x == null)) return;
-
-            foreach (var tileEntity in tileEntities.Where(tileEntity => tileEntity))
+        for (var i = transform.childCount - 1; i >= 0; i--)
         {
-            DestroyImmediate(tileEntity);
+            DestroyImmediate(transform.GetChild(i).gameObject);
         }
-
-        tileEntities.Clear();
 
         var oldPos = gameObject.transform.position;
         gameObject.transform.position = Vector3.zero;
@@ -104,8 +98,6 @@ public class Room : SerializedMonoBehaviour
             boxCollider.size = new Vector3(boxCollider.size.x, boxCollider.size.y, 0.1f);
 
             gO.transform.Translate(-size.x / 2, size.y / 2, 0);
-
-            tileEntities.Add(gO);
         }
         
         gameObject.transform.position = oldPos;
