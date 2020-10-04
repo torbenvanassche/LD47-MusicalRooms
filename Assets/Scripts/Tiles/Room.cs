@@ -16,6 +16,12 @@ public class Room : SerializedMonoBehaviour
 
     [HideInInspector] public List<GameObject> tileEntities = new List<GameObject>();
 
+    public List<GameObject> ShuffleEventOrder()
+    {
+        var events = tileEntities.Where(o => o.GetComponent<TileEvent>() != null);
+        return events.OrderBy(x => Random.value).ToList();
+    }
+
     public void IsCompleted()
     {
         isCompleted = tileEntities
