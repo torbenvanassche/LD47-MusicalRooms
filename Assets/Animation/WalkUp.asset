@@ -30,4 +30,4 @@ MonoBehaviour:
   - {fileID: -5745411185557632449, guid: 7b051df7b8c99f24796d13776adba40a, type: 3}
   - {fileID: -284113337769933636, guid: 7b051df7b8c99f24796d13776adba40a, type: 3}
   - {fileID: 800513759080323501, guid: 7b051df7b8c99f24796d13776adba40a, type: 3}
-  animationSpeed: 0.15
+  animationSpeed: 0.1

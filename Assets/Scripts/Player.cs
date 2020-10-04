@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public Rigidbody rig = null;
     [HideInInspector] public CapsuleCollider collider = null;
-    
+    [HideInInspector] public SpriteRenderer renderer = null;
+
     public GameObject shadow;
 
     void Awake()
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
         rig = GetComponent<Rigidbody>();
         Controls = new InputSettings();
         collider = GetComponent<CapsuleCollider>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()

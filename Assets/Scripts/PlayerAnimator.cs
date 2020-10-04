@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.LowLevel;
 
 [RequireComponent(typeof(SpriteAnimator))]
 public class PlayerAnimator : SerializedMonoBehaviour
@@ -22,9 +23,19 @@ public class PlayerAnimator : SerializedMonoBehaviour
         WalkDown
     }
 
+    public AnimationState CurrentAnimation
+    {
+        get => currentAnimation;
+        set
+        {
+            currentAnimation = value;
+            SetAnimation(value);
+        }
+    }
+
     private void AnimationChange()
     {
-        SetAnimation(currentAnimation);
+        SetAnimation(CurrentAnimation);
     }
 
     public Dictionary<AnimationState, AnimationContainer> animations = new Dictionary<AnimationState, AnimationContainer>();
@@ -49,8 +60,33 @@ public class PlayerAnimator : SerializedMonoBehaviour
             _shadowAnimator = _player.shadow.AddComponent<SpriteAnimator>();
         }
 
-        SetAnimation(currentAnimation);
+        SetAnimation(CurrentAnimation);
 
+        Player.Controls.Player.Move.performed += context =>
+        {
+            var input = context.ReadValue<Vector2>();
+            if (input.y > 0)
+            {
+                CurrentAnimation = AnimationState.WalkUp;
+            }
 
+            if (input.y < 0)
+            {
+                CurrentAnimation = AnimationState.WalkDown;
+            }
+            if (input.x < 0)
+            {
+                CurrentAnimation = AnimationState.WalkRight;
+            }
+            if (input.x > 0)
+            {
+                CurrentAnimation = AnimationState.WalkLeft;
+            }
+        };
+        
+        Player.Controls.Player.Move.canceled += context =>
+        {
+            CurrentAnimation = AnimationState.Idle;
+        };
     }
 }

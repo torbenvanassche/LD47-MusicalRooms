@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioFile: {fileID: 11400000, guid: 1036dd91a676c494989cd09717dc8417, type: 2}
+  _audioFile: {fileID: 0}
   action:
     m_PersistentCalls:
       m_Calls:
@@ -438,6 +438,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267796221}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &313632130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313632131}
+  m_Layer: 0
+  m_Name: ShadowPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &313632131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313632130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.009, y: 0.001, z: -5.01}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 446063136}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390474371
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +689,7 @@ Transform:
   - {fileID: 2029008343}
   - {fileID: 1382164261710012099}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &446063135
 GameObject:
@@ -671,6 +702,7 @@ GameObject:
   - component: {fileID: 446063136}
   - component: {fileID: 446063137}
   - component: {fileID: 446063138}
+  - component: {fileID: 446063139}
   m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
@@ -685,11 +717,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446063135}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.1595, z: 0.158}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.018999934, z: 0.15799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1900664154}
+  m_Father: {fileID: 313632131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &446063137
@@ -756,6 +788,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites: {fileID: 0}
+--- !u!114 &446063139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446063135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d52096760b8c046967fe94de2bbd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &501494166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1467,7 @@ MonoBehaviour:
   _audio: {fileID: 658599385}
   CurrentRoom: {fileID: 2029008342}
   camera: {fileID: 0}
+  player: {fileID: 1900664151}
 --- !u!114 &658599385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,7 +1809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1131683955
 GameObject:
@@ -2744,7 +2789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5ca68feeabc01418026689d10c928d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 15
+  _movementSpeed: 10
   spawnPosition: {fileID: 2095396616}
   _rotationSpeed: 20
 --- !u!114 &1900664151
@@ -2761,6 +2806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rig: {fileID: 0}
   collider: {fileID: 0}
+  renderer: {fileID: 0}
   shadow: {fileID: 446063135}
 --- !u!136 &1900664152
 CapsuleCollider:
@@ -2799,13 +2845,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900664149}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.009, y: 0.357, z: -5.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.009, y: 0.3570001, z: -5.01}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children:
-  - {fileID: 446063136}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1900664155
 SpriteRenderer:

@@ -48,6 +48,7 @@
             <e p="Manager.cs" t="Include" />
             <e p="SceneManagement.cs" t="Include" />
           </e>
+          <e p="OrientShadow.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerAnimator.cs" t="Include" />
           <e p="PlayerInteract.cs" t="Include" />
@@ -63,27 +64,6 @@
           <e p="Utilities" t="Include">
             <e p="Extensions.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
-          </e>
-        </e>
-        <e p="tripolygon" t="Include">
-          <e p="UModeler" t="Include">
-            <e p="IslandVillage" t="Include">
-              <e p="readme.txt" t="Include" />
-            </e>
-            <e p="Materials" t="Include">
-              <e p="Basic" t="Include">
-                <e p="UModeler_UnlitVertexColorShader.shader" t="Include" />
-              </e>
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="PureCode" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="MeshFilterEditor.cs" t="Include" />
-                  <e p="TransformEditor.cs" t="Include" />
-                  <e p="UModelerEditorInitializer.cs" t="Include" />
-                </e>
-              </e>
-            </e>
           </e>
         </e>
       </e>
