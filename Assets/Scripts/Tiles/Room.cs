@@ -5,18 +5,39 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[Serializable]
+public class Container
+{
+    public AudioFileSettings audio;
+    public TileEvent tileEvent;
+}
+
 public class Room : SerializedMonoBehaviour
 {
+    [TableList(AlwaysExpanded = true)] public Stack<Container> objectives = new Stack<Container>();
+    
     public Vector2Int size = new Vector2Int(5, 5);
     public GameObject prefab = null;
     [SerializeField] private Material interactableMaterial = null;
     public Door door = null;
 
     private bool isCompleted = false;
-    
+
     [HideInInspector] public List<Texture2D> tiles = new List<Texture2D>();
     [HideInInspector] public int noteAmount = 1;
 
+    private void Start()
+    {
+        foreach (var objective in objectives)
+        {
+            if (!objective.tileEvent)
+            {
+                var options = transform.GetComponentsInChildren<TileEvent>();
+                objective.tileEvent = options[Random.Range(0, options.Length)];
+            }
+        }
+    }
+    
     public void IsCompleted()
     {
         isCompleted = transform.GetComponentsInChildren<TileEvent>()
