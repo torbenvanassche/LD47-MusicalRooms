@@ -1,12 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Utilities;
 
 [RequireComponent(typeof(AudioManager)), RequireComponent(typeof(SceneManagement))]
 public class Manager : Singleton<Manager>
 {
     public AudioManager _audio = null;
-    public Room CurrentRoom = null;
+    public RoomManager rooms = null;
+    
+    [HideInInspector] public Room CurrentRoom = null;
     [HideInInspector] public Camera camera = null;
 
     public Player player = null;
@@ -19,5 +20,7 @@ public class Manager : Singleton<Manager>
     private void Reset()
     {
         _audio = GetComponent<AudioManager>();
+        rooms = GetComponent<RoomManager>();
+        player = FindObjectOfType<Player>();
     }
 }

@@ -16,10 +16,18 @@ public class TileEvent : MonoBehaviour
     {
         return Manager.Instance._audio ? Manager.Instance._audio.audioContainer.data.Values : null;
     }
-    
-    public void SetCompleted()
+
+    public void ValidateEvent()
     {
-        completed = true;
+        var todoEvents = Manager.Instance.CurrentRoom.order;
+        if (todoEvents.Count != 0 && todoEvents[0].GetComponent<TileEvent>() == this)
+        {
+            completed = true;
+            todoEvents.Remove(gameObject);
+            return;
+        }
+
+        completed = false;
     }
 
     private void Start()
@@ -31,6 +39,8 @@ public class TileEvent : MonoBehaviour
                 Manager.Instance._audio.PlaySound(_audioFile);
             }
         });
+        
+        action.AddListener(ValidateEvent);
 
         defaultTexture = GetComponent<MeshRenderer>().material.mainTexture as Texture2D;
     }

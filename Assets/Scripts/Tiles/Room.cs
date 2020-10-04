@@ -2,6 +2,7 @@
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Room : SerializedMonoBehaviour
 {
@@ -15,11 +16,18 @@ public class Room : SerializedMonoBehaviour
     public Door door = null;
 
     [HideInInspector] public List<GameObject> tileEntities = new List<GameObject>();
+    
+    public List<GameObject> order = new List<GameObject>();
 
     public List<GameObject> ShuffleEventOrder()
     {
-        var events = tileEntities.Where(o => o.GetComponent<TileEvent>() != null);
+        var events = tileEntities.Where(o => o.GetComponent<TileEvent>());
         return events.OrderBy(x => Random.value).ToList();
+    }
+
+    public void Start()
+    {
+        order = ShuffleEventOrder();
     }
 
     public void IsCompleted()
@@ -31,6 +39,7 @@ public class Room : SerializedMonoBehaviour
         if (isCompleted)
         {
             door.Open();
+            Manager.Instance.rooms.Next();
         }
     }
 }

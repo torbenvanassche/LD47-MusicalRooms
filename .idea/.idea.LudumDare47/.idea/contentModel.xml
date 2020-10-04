@@ -46,6 +46,7 @@
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="Manager.cs" t="Include" />
+            <e p="RoomManager.cs" t="Include" />
             <e p="SceneManagement.cs" t="Include" />
           </e>
           <e p="OrientShadow.cs" t="Include" />
