@@ -10,19 +10,19 @@ public class RoomManager : SerializedMonoBehaviour
 
     private void Start()
     {
-        Manager.Instance.CurrentRoom = Rooms[index];
+        Manager.Instance.currentRoom = Rooms[index];
     }
 
     public void Next()
     {
         index++;
 
-        if (index < Rooms.Count) Manager.Instance.CurrentRoom = Rooms[index];
+        if (index < Rooms.Count) Manager.Instance.currentRoom = Rooms[index];
     }
 
     [Button] public void Skip()
     {
-        Manager.Instance.CurrentRoom.door.Open();
+        Manager.Instance.currentRoom.door.Open();
         Next();
     }
 }

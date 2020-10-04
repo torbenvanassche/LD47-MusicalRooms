@@ -1,32 +1,27 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
     private Vector3 moveInput;
-    private Vector3 _moveDirection;
-    private Vector3 _moveForce;
+    private Vector3 moveDirection;
+    private Vector3 moveForce;
+    private Vector3 outDir;
+    private Player player = null;
+    private GameObject target = null;
     
-    [SerializeField] private float _movementSpeed = 10f;
-    private Vector3 _outDir = Vector3.zero;
-
-    private Player _player = null;
-
+    [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private Transform spawnPosition = null;
     
-    private Quaternion _lastRotation;
-    [SerializeField] private float _rotationSpeed = 5f;
-
-    private GameObject target = null;
-
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         yield return new WaitUntil(() =>
         {
-            _player = GetComponent<Player>();
-            return _player;
+            player = GetComponent<Player>();
+            return player;
         });
         
         Player.Controls.Player.Move.performed += context =>
@@ -37,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         Player.Controls.Player.Move.canceled += context =>
         {
             moveInput = Vector3.zero;
-            _player.rig.velocity = moveInput;
+            player.rig.velocity = moveInput;
         };
 
         if (spawnPosition)
@@ -50,24 +45,18 @@ public class PlayerMovement : MonoBehaviour
     
     public void Update()
     {
-        if (_player.rig)
+        if (player.rig)
         {
-            _moveDirection = Manager.Instance.camera.transform.rotation * moveInput;
-            _moveDirection.y = 0;
+            moveDirection = Manager.Instance.camera.transform.rotation * moveInput;
+            moveDirection.y = 0;
 
-            _outDir = _moveDirection.normalized;
-            
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lastRotation, Time.deltaTime * _rotationSpeed);
-
-            //add move speed
-            _outDir *= _movementSpeed;
+            outDir = moveDirection.normalized * movementSpeed;
 
             if (target)
             {
                 var cameraPosition = Manager.Instance.camera.transform.position;
                 cameraPosition.y = transform.position.y;
                 target.transform.position = cameraPosition;
-            
                 transform.LookAt(target.transform);
             }
         }
@@ -75,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void FixedUpdate()
     {
-        _player.rig.AddForce(_outDir);
+        player.rig.AddForce(outDir);
     }
 
     private void Move(Vector3 position)

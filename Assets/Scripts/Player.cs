@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     public static InputSettings Controls;
 
     [HideInInspector] public Rigidbody rig = null;
-    [HideInInspector] public CapsuleCollider collider = null;
-    [HideInInspector] public SpriteRenderer renderer = null;
+    [HideInInspector] public new CapsuleCollider collider = null;
+    [HideInInspector] public new SpriteRenderer renderer = null;
 
     public GameObject shadow;
 

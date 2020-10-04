@@ -21,7 +21,7 @@ public class PlayerInteract : MonoBehaviour
                 if (hit.transform.gameObject.TryGetComponent<TileEvent>(out var tileEvent))
                 {
                     tileEvent.action.Invoke();
-                    Manager.Instance.CurrentRoom.IsCompleted();
+                    Manager.Instance.currentRoom.IsCompleted();
                 }
             }
         };

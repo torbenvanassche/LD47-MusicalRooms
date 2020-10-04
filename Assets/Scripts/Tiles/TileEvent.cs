@@ -14,12 +14,12 @@ public class TileEvent : MonoBehaviour
 
     private IEnumerable GetAudioFiles()
     {
-        return Manager.Instance._audio ? Manager.Instance._audio.audioContainer.data.Values : null;
+        return Manager.Instance.audio ? Manager.Instance.audio.audioContainer.data.Values : null;
     }
 
     public void ValidateEvent()
     {
-        var todoEvents = Manager.Instance.CurrentRoom.order;
+        var todoEvents = Manager.Instance.currentRoom.order;
         if (todoEvents.Count != 0 && todoEvents[0].GetComponent<TileEvent>() == this)
         {
             completed = true;
@@ -34,9 +34,9 @@ public class TileEvent : MonoBehaviour
     {
         action.AddListener(() =>
         {
-            if (_audioFile && Manager.Instance._audio)
+            if (_audioFile && Manager.Instance.audio)
             {
-                Manager.Instance._audio.PlaySound(_audioFile);
+                Manager.Instance.audio.PlaySound(_audioFile);
             }
         });
         
