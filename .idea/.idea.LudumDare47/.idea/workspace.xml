@@ -20,43 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioDataContainer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioDataContainer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_C.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_C.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loopbare.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loopbare.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-05.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-05.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-06.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-06.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_C.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_C.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_F.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_F.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/LD_loop_C.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/LD_loop_C.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/LD_loop_CF.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/LD_loop_CF.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/LD_loopbare.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/LD_loopbare.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/tile_C.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/tile_C.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/tile_F.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/tile_F.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/menu_click.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/menu_click.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
