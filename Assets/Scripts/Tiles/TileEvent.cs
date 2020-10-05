@@ -19,7 +19,7 @@ public class TileEvent : MonoBehaviour
         return Manager.Instance.audio ? Manager.Instance.audio.audioContainer.data.Values : null;
     }
 
-    private void Start()
+    public void Start()
     {
         action.AddListener(() =>
         {

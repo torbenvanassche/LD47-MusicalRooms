@@ -15,14 +15,39 @@ public class RoomEditor : OdinEditor
         r = target as Room;
         v = r.size;
     }
+    
+    private void Populate()
+    {
+        if (r.prefab)
+        {
+            for (var index = 0; index < r.tiles.Count; index++)
+            {
+                if (!r.tiles[index])
+                {
+                    r.tiles[index] = r.prefab.GetComponent<MeshRenderer>().sharedMaterial.mainTexture as Texture2D;
+                }
+            }
+        }
+    }
+    
+    private void DestroyRoom()
+    {
+        r.Clear();
+        r.tiles.Clear();
+        
+        while (r.size.x * r.size.y > r.tiles.Count)
+        {
+            r.tiles.Add(null);
+        }
+    }
 
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
         GUILayout.BeginHorizontal();
-        if (GUILayout.Button("Reset")) r.DestroyRoom();
-        if (GUILayout.Button("Populate")) r.Populate();
+        if (GUILayout.Button("Reset")) DestroyRoom();
+        if (GUILayout.Button("Populate")) Populate();
         GUILayout.EndHorizontal();
 
         fold = EditorGUILayout.Foldout(fold, "Show / Hide grid editor.");
@@ -43,8 +68,7 @@ public class RoomEditor : OdinEditor
         if (GUILayout.Button("Regenerate"))
         {
             r.Regenerate();
-            r.Start();
-            
+
             if(!Application.isPlaying) EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
         }
     }

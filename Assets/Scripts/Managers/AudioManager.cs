@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
     
     [Space, InlineEditor(InlineEditorObjectFieldModes.Hidden), ShowIf(nameof(IsPlaying))]public AudioContainer audioContainer = null;
     [SerializeField, ListDrawerSettings(HideAddButton = true, CustomRemoveElementFunction = nameof(RemoveSource))] private List<AudioSource> sources = new List<AudioSource>();
-    [SerializeField] private GameObject soundSourceContainer = null;
+    private GameObject soundSourceContainer = null;
 
     private void RemoveSource(AudioSource a)
     {

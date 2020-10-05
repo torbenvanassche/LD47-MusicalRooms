@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ImageAnimator : MonoBehaviour
 {
     public AnimationContainer sprites;
-    public List<Sprite> animation = new List<Sprite>();
+    private new List<Sprite> animation = new List<Sprite>();
     private bool firstLoop = true;
 
     private Image ren = null;

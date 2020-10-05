@@ -15,6 +15,11 @@ public class Door : SerializedMonoBehaviour
     public void Open()
     {
         if(audioFile) Manager.Instance.audio.PlaySound(audioFile);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+
+    public void Close()
+    {
+        gameObject.SetActive(true);
     }
 }

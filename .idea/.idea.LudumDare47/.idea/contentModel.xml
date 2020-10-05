@@ -35,6 +35,7 @@
           <e p="Audio" t="Include">
             <e p="AudioContainer.cs" t="Include" />
             <e p="AudioFileSettings.cs" t="Include" />
+            <e p="BGM.cs" t="Include" />
           </e>
           <e p="CameraController.cs" t="Include" />
           <e p="Editor" t="Include">

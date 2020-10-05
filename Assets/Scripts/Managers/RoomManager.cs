@@ -6,23 +6,32 @@ using UnityEngine;
 public class RoomManager : SerializedMonoBehaviour
 {
     public List<Room> Rooms = new List<Room>();
-    private int index = 0;
+    public int currentRoom;
 
     private void Start()
     {
-        Manager.Instance.currentRoom = Rooms[index];
+        Manager.Instance.currentRoom = Rooms[currentRoom];
+    }
+
+    [Button]
+    private void RegenerateAll()
+    {
+        foreach (var room in Rooms)
+        {
+            room.Regenerate();
+        }
     }
 
     public void Next()
     {
-        index++;
-
-        if (index < Rooms.Count) Manager.Instance.currentRoom = Rooms[index];
-    }
-
-    [Button] public void Skip()
-    {
-        Manager.Instance.currentRoom.door.Open();
-        Next();
+        //close entrance to previous room
+        var prevIndex = currentRoom - 1;
+        if (prevIndex < 0) prevIndex = Rooms.Count - 1;
+        Rooms[prevIndex].door.Close();
+        Rooms[prevIndex].Regenerate();
+        
+        currentRoom++;
+        if (currentRoom >= Rooms.Count) currentRoom = 0;
+        Manager.Instance.currentRoom = Rooms[currentRoom];
     }
 }
