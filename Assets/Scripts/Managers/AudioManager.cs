@@ -94,6 +94,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void StopSound(AudioFileSettings audio)
+    {
+        var sound = sources.Where(x => x.clip == audio.clip);
+        foreach (var audioSource in sound)
+        {
+            Destroy(audioSource);
+        }
+    }
+
     public void Awake()
     {
         soundSourceContainer = new GameObject {name = "SoundPlayer"};

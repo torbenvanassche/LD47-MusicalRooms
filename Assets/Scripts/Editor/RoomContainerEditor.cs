@@ -12,13 +12,6 @@ public class RoomContainerEditor : OdinEditor
         var t = target as RoomTileContainer;
 
         var clips = AssetDatabase.FindAssets($"t:{nameof(Sprite)}", new[] {"Assets/Sprites/Source"});
-        
-        //find function data
-        var functions = AssetDatabase.FindAssets($"t:{nameof(TileFunctions)}", new[] {"Assets/Sprites"});
-        if (functions.Length == 0)
-        {
-            AssetDatabase.CreateAsset(CreateInstance<TileFunctions>(), "Assets/Sprites/TileFunctions.asset");
-        }
 
         foreach (var clip in clips)
         {

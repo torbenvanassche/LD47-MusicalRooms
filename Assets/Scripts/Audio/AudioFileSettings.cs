@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Container/Audio", fileName = "AudioData")]
+[CreateAssetMenu(menuName = "Container/Audio", fileName = "AudioData"), Serializable]
 public class AudioFileSettings : SerializedScriptableObject
 {
     [Space] public AudioClip clip;

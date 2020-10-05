@@ -12,7 +12,7 @@ public class Container
     [HideInInspector] public TileEvent tileEvent = null;
     public Texture2D activeTexture = null;
     public float highlightTimer = 1;
-    public AudioFileSettings BGM;
+    public AudioFileSettings BGMChange;
 }
 
 public class Room : SerializedMonoBehaviour

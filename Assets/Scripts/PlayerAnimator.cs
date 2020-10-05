@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.LowLevel;
 
 [RequireComponent(typeof(SpriteAnimator))]
 public class PlayerAnimator : SerializedMonoBehaviour
@@ -13,6 +12,16 @@ public class PlayerAnimator : SerializedMonoBehaviour
 
     [SerializeField, OnValueChanged(nameof(AnimationChange))]
     private AnimationState currentAnimation = AnimationState.Idle;
+    
+    [SerializeField, ValueDropdown(nameof(GetAudioFiles))] public List<AudioFileSettings> walkSound = null;
+    private Coroutine footsteps = null;
+    private AudioSource footstepSource;
+    [SerializeField] private float delay;
+
+    private IEnumerable GetAudioFiles()
+    {
+        return Manager.Instance.audio ? Manager.Instance.audio.audioContainer.data.Values : null;
+    }
     
     public enum AnimationState
     {
@@ -60,6 +69,8 @@ public class PlayerAnimator : SerializedMonoBehaviour
             _shadowAnimator = _player.shadow.AddComponent<SpriteAnimator>();
         }
 
+        footstepSource = GetComponent<AudioSource>();
+        
         SetAnimation(CurrentAnimation);
 
         Player.Controls.Player.Move.performed += context =>
@@ -82,11 +93,49 @@ public class PlayerAnimator : SerializedMonoBehaviour
             {
                 CurrentAnimation = AnimationState.WalkLeft;
             }
+
+            if(delay != 0)footsteps = StartCoroutine(Footsteps());
         };
         
         Player.Controls.Player.Move.canceled += context =>
         {
             CurrentAnimation = AnimationState.Idle;
+            StopCoroutine(footsteps);
         };
+    }
+
+    void PlaySound(AudioFileSettings audio)
+    {
+        if (footstepSource)
+        {
+            footstepSource.clip = audio.clip;
+            footstepSource.volume = audio.Volume;
+            footstepSource.pitch = audio.Pitch;
+            footstepSource.priority = audio.Priority;
+            footstepSource.loop = audio.Loop;
+        
+            footstepSource.Play();   
+        }
+    }
+
+    IEnumerator Footsteps()
+    {
+        var lastIndex = -1;
+
+        while (true)
+        {
+            if (!footstepSource.isPlaying)
+            {
+                var currentIndex = Random.Range(0, walkSound.Count);
+
+                if (lastIndex != currentIndex)
+                {
+                    PlaySound(walkSound[currentIndex]);
+                    lastIndex = currentIndex;
+                    continue;
+                }
+            }
+            yield return new WaitForSeconds(delay);
+        }
     }
 }

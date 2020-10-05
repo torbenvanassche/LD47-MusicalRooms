@@ -60,7 +60,6 @@
             <e p="Room.cs" t="Include" />
             <e p="RoomTileContainer.cs" t="Include" />
             <e p="TileEvent.cs" t="Include" />
-            <e p="TileFunctions.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
             <e p="Extensions.cs" t="Include" />
