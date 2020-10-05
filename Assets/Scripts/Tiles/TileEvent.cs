@@ -40,7 +40,6 @@ public class TileEvent : MonoBehaviour
             
             //Check if the system has completed
             Manager.Instance.currentRoom.IsCompleted();
-            
         });
 
         defaultTexture = GetComponent<MeshRenderer>().material.mainTexture as Texture2D;

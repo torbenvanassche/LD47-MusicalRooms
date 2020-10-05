@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
-using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -31,8 +30,9 @@ public class Room : SerializedMonoBehaviour
 
     public void Start()
     {
-        foreach (var objective in objectives)
+        for (var i = 0; i < objectives.Count; i++)
         {
+            var objective = objectives[i];
             if (!objective.tileEvent)
             {
                 var options = transform.GetComponentsInChildren<TileEvent>();
@@ -40,7 +40,7 @@ public class Room : SerializedMonoBehaviour
                 while (true)
                 {
                     var index = Random.Range(0, options.Length);
-                    if(!options[index].audioFile)
+                    if (!options[index].audioFile)
                     {
                         objective.tileEvent = options[index];
                         objective.tileEvent.audioFile = objective.audio;
@@ -50,6 +50,8 @@ public class Room : SerializedMonoBehaviour
                     }
                 }
             }
+
+            //Generate world UI
         }
     }
 
@@ -71,6 +73,7 @@ public class Room : SerializedMonoBehaviour
             Manager.Instance.bgmPlayer.Queue(todo.BGMChange);
             tileEvent.completed = true;
         }
+
     }
 
     public void IsCompleted()
