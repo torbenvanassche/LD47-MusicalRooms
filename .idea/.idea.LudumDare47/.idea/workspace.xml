@@ -22,53 +22,13 @@
     <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioDataContainer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioDataContainer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/footstep-05.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/footstep-05.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/footstep-06.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Source/footstep-06.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/EventTile.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/EventTile.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-05.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-05.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-06.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-06.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioFileSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioFileSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/RoomContainerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/RoomContainerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tiles/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tiles/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/TileFunctions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/TileFunctions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RoomTileContainer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/RoomTileContainer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/GrassFloor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/GrassFloor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/GrassFloor2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/GrassFloor2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground-Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground-Sheet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Ground2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Materials/ScifiFloor1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Materials/ScifiFloor1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Materials/ScifiFloor2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Materials/ScifiFloor2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Wall Front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Wall Front.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Wall Texture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Wall Texture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Wall Top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/Wall Top.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/WallGrass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/WallGrass.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TileFunctions.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TileFunctions.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/AudioContainerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tiles/Room.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/3e/c63cafc5/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OrientShadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -138,6 +99,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioFileSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ImageAnimator.cs" />
       </list>
     </option>
   </component>
@@ -193,7 +155,7 @@
       <workItem from="1601713292716" duration="38614000" />
       <workItem from="1601799974431" duration="27559000" />
       <workItem from="1601844959175" duration="12096000" />
-      <workItem from="1601884687219" duration="3261000" />
+      <workItem from="1601884687219" duration="4120000" />
     </task>
     <servers />
   </component>

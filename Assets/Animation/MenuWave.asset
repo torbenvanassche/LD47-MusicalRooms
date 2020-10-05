@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d745f7e6ffdce184c9623bdb297a9e17, type: 3}
+  m_Name: MenuWave
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  data:
+  - {fileID: 8932528173109155306, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 8814163408346247010, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 6044829864563034331, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 2841630683018520664, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: -8680036948751491167, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 4878754364418514119, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: -1157977563308393052, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 855601554570947620, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 3483565419101978972, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 3421413855009378369, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  - {fileID: 5489419785072497044, guid: be3d4f3a7a915a543afb3ce6602d4ae7, type: 3}
+  animationSpeed: 0.15
