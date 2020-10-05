@@ -118,7 +118,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  audioFile: {fileID: 0}
+  audioFile: {fileID: 11400000, guid: 00e38cb910aedfd45974061290f53878, type: 2}
 --- !u!1 &1435829210682389033
 GameObject:
   m_ObjectHideFlags: 0
