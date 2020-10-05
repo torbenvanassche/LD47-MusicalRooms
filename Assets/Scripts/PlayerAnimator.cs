@@ -16,7 +16,6 @@ public class PlayerAnimator : SerializedMonoBehaviour
     [SerializeField, ValueDropdown(nameof(GetAudioFiles))] public List<AudioFileSettings> walkSound = null;
     private Coroutine footsteps = null;
     private AudioSource footstepSource;
-    [SerializeField] private float delay;
 
     private IEnumerable GetAudioFiles()
     {
@@ -94,13 +93,14 @@ public class PlayerAnimator : SerializedMonoBehaviour
                 CurrentAnimation = AnimationState.WalkLeft;
             }
 
-            if(delay != 0)footsteps = StartCoroutine(Footsteps());
+            footsteps = StartCoroutine(Footsteps());
         };
         
         Player.Controls.Player.Move.canceled += context =>
         {
             CurrentAnimation = AnimationState.Idle;
-            StopCoroutine(footsteps);
+            
+            if(footsteps != null) StopCoroutine(footsteps);
         };
     }
 
@@ -135,7 +135,7 @@ public class PlayerAnimator : SerializedMonoBehaviour
                     continue;
                 }
             }
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(0.16f);
         }
     }
 }

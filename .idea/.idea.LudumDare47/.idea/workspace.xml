@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-05.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-05.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-06.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-06.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,8 +96,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tiles/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioFileSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ImageAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" />
       </list>
     </option>
   </component>
@@ -155,7 +153,7 @@
       <workItem from="1601713292716" duration="38614000" />
       <workItem from="1601799974431" duration="27559000" />
       <workItem from="1601844959175" duration="12096000" />
-      <workItem from="1601884687219" duration="4120000" />
+      <workItem from="1601884687219" duration="5468000" />
     </task>
     <servers />
   </component>
