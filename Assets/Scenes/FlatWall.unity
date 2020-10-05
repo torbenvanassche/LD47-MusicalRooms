@@ -27064,6 +27064,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 1400707587238624034, guid: 24c78ab0339166c4a9e54236eac4b1d4, type: 3}
+    - target: {fileID: 1400707587238624034, guid: 24c78ab0339166c4a9e54236eac4b1d4, type: 3}
+      propertyPath: audioFile
+      value: 
+      objectReference: {fileID: 11400000, guid: 00e38cb910aedfd45974061290f53878, type: 2}
     - target: {fileID: 1400707587238624036, guid: 24c78ab0339166c4a9e54236eac4b1d4, type: 3}
       propertyPath: m_Name
       value: DoorFrame
