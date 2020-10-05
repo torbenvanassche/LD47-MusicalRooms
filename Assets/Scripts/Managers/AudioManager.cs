@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
@@ -22,10 +21,12 @@ public class AudioManager : MonoBehaviour
         return !Application.isPlaying;
     }
 
+    #if UNITY_EDITOR
     private void Reset()
     {
         audioContainer = AssetDatabase.LoadAssetAtPath<AudioContainer>("Assets/AudioData.asset");
     }
+    #endif
 
     private void DestroySource(AudioSource t)
     {

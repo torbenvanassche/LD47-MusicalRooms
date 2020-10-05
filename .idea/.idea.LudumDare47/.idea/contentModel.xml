@@ -56,6 +56,7 @@
           <e p="PlayerAnimator.cs" t="Include" />
           <e p="PlayerInteract.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="Restart.cs" t="Include" />
           <e p="SpriteAnimator.cs" t="Include" />
           <e p="Tiles" t="Include">
             <e p="Door.cs" t="Include" />

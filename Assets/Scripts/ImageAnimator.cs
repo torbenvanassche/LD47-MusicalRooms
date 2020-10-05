@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ImageAnimator : MonoBehaviour
 {
     public AnimationContainer sprites;
-    private new List<Sprite> animation = new List<Sprite>();
+    private List<Sprite> customAnimation = new List<Sprite>();
     private bool firstLoop = true;
 
     private Image ren = null;
@@ -16,7 +16,7 @@ public class ImageAnimator : MonoBehaviour
 
     private void Start()
     {
-        animation.AddRange(sprites.data);
+        customAnimation.AddRange(sprites.data);
         
         ren = GetComponent<Image>();
         if (sprites)
@@ -36,17 +36,17 @@ public class ImageAnimator : MonoBehaviour
             ++currentIndex;
             currentTime = 0;
 
-            if (currentIndex >= animation.Count)
+            if (currentIndex >= customAnimation.Count)
             {
                 currentIndex = 0;
                 if (firstLoop)
                 {
-                    animation.RemoveRange(0, 7);
+                    customAnimation.RemoveRange(0, 7);
                     firstLoop = false;   
                 }
             }
 
-            ren.sprite = animation[currentIndex];
+            ren.sprite = customAnimation[currentIndex];
         }
     }
 }

@@ -13,7 +13,8 @@ public class BGM : MonoBehaviour
     public void Start()
     {
         source = GetComponent<AudioSource>();
-        if(initialBGM) PlaySound(initialBGM);
+        if (initialBGM) PlaySound(initialBGM);
+        else source.clip = null;
     }
 
     private void Update()
@@ -25,8 +26,10 @@ public class BGM : MonoBehaviour
         }
     }
 
-    public void Queue(AudioFileSettings file)
+    public void Queue(AudioFileSettings file = null)
     {
+        if (!file) file = initialBGM;
+        
         queued = file;
         source.loop = false;
     }
