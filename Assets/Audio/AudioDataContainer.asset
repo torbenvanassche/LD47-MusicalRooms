@@ -20,10 +20,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1036dd91a676c494989cd09717dc8417, type: 2}
     - {fileID: 11400000, guid: f5d4fc452d3524c44ad371136be89c11, type: 2}
     - {fileID: 11400000, guid: 4f418707e6575b441a337c5568870178, type: 2}
-    - {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
-    - {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
-    - {fileID: 11400000, guid: 7721c757c3ec5934682519888dcd3470, type: 2}
-    - {fileID: 11400000, guid: 6f7a574d33833d947af3d8078464d75d, type: 2}
+    - {fileID: 11400000, guid: 296c9b70d585c734ebd0b1bc342d3213, type: 2}
+    - {fileID: 11400000, guid: 891e811dc854c744b99b1f6a7ae36ea1, type: 2}
+    - {fileID: 11400000, guid: 6472403e7bd3ac549ab5e6e928181f70, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -42,13 +41,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 7
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 1
-      Data: footstep-01
+      Data: footstep-001
     - Name: $v
       Entry: 10
       Data: 0
@@ -60,7 +59,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: footstep-02
+      Data: footstep-002
     - Name: $v
       Entry: 10
       Data: 1
@@ -72,7 +71,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: footstep-03
+      Data: footstep-003
     - Name: $v
       Entry: 10
       Data: 2
@@ -84,7 +83,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: footstep-04
+      Data: footstep-004
     - Name: $v
       Entry: 10
       Data: 3
@@ -96,7 +95,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: tile_C
+      Data: footstep-005
     - Name: $v
       Entry: 10
       Data: 4
@@ -108,7 +107,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: tile_F
+      Data: footstep-006
     - Name: $v
       Entry: 10
       Data: 5
@@ -120,22 +119,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: footstep-05
+      Data: LD_upbeat-002
     - Name: $v
       Entry: 10
       Data: 6
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: footstep-06
-    - Name: $v
-      Entry: 10
-      Data: 7
     - Name: 
       Entry: 8
       Data: 
