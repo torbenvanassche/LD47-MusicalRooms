@@ -13,6 +13,7 @@ public class TileEvent : MonoBehaviour
     private Texture2D defaultTexture;
     [HideInInspector] public Texture2D activeTexture;
     [HideInInspector] public bool interactable = true;
+    public GameObject indicator;
 
     private IEnumerable GetAudioFiles()
     {

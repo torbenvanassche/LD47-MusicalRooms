@@ -109,6 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2777108dce49fac4d851911f566851cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  audioFile: {fileID: 0}
 --- !u!1 &1435829210682389033
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,8 +144,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435829210682389033}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.033, y: 0, z: -0.501}
-  m_LocalScale: {x: 7.08, y: 6.5, z: 7}
+  m_LocalPosition: {x: 0.093, y: 0, z: -0.501}
+  m_LocalScale: {x: 5, y: 5, z: 7}
   m_Children: []
   m_Father: {fileID: 1400707587238624037}
   m_RootOrder: 0

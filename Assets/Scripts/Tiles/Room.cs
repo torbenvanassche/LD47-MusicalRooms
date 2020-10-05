@@ -27,12 +27,16 @@ public class Room : SerializedMonoBehaviour
     private bool isCompleted = false;
 
     [HideInInspector] public List<Texture2D> tiles = new List<Texture2D>();
+    private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
 
     public void Start()
     {
         for (var i = 0; i < objectives.Count; i++)
         {
             var objective = objectives[i];
+            
+            if(objective.tileEvent) DestroyImmediate(objective.tileEvent.indicator);
+            
             if (!objective.tileEvent)
             {
                 var options = transform.GetComponentsInChildren<TileEvent>();
@@ -52,6 +56,15 @@ public class Room : SerializedMonoBehaviour
             }
 
             //Generate world UI
+            var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube.transform.position = door.transform.position;
+            cube.transform.SetParent(door.transform);
+            cube.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+            cube.transform.Translate(new Vector3(0.5f, 0.38f, 0.4f * i - 0.2f), transform.parent);
+            cube.GetComponent<MeshRenderer>().sharedMaterial.color = new Color(0.2f, 0.2f, 0.2f);
+            
+            //add indicator reference to tile event
+            objective.tileEvent.indicator = cube;
         }
     }
 
@@ -71,9 +84,10 @@ public class Room : SerializedMonoBehaviour
         if (todo.tileEvent == tileEvent)
         {
             Manager.Instance.bgmPlayer.Queue(todo.BGMChange);
+            tileEvent.indicator.GetComponent<MeshRenderer>().material.color = Color.white;
+            tileEvent.indicator.GetComponent<MeshRenderer>().material.SetColor(EmissionColor, Color.white);;
             tileEvent.completed = true;
         }
-
     }
 
     public void IsCompleted()
@@ -113,6 +127,7 @@ public class Room : SerializedMonoBehaviour
 
         foreach (var objective in objectives)
         {
+            DestroyImmediate(objective.tileEvent.indicator);
             objective.tileEvent = null;
         }
     }

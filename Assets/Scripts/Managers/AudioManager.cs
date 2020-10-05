@@ -8,19 +8,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [ValueDropdown(nameof(GetAudioFiles)), HorizontalGroup("PlaySound"), HideLabel, SerializeField] private AudioFileSettings selected = null;
-    [HorizontalGroup("PlaySound"), Button] void PlaySound()
-    {
-        PlaySound(selected);
-    }
-
-    private IEnumerable GetAudioFiles()
-    {
-        return audioContainer.data.Values;
-    }
-    
     [Space, InlineEditor(InlineEditorObjectFieldModes.Hidden), ShowIf(nameof(IsPlaying))]public AudioContainer audioContainer = null;
-    [SerializeField, ListDrawerSettings(HideAddButton = true, CustomRemoveElementFunction = nameof(RemoveSource))] private List<AudioSource> sources = new List<AudioSource>();
+    private List<AudioSource> sources = new List<AudioSource>();
     private GameObject soundSourceContainer = null;
 
     private void RemoveSource(AudioSource a)
