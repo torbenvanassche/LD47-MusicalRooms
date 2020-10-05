@@ -4763,7 +4763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -6746,7 +6746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -13666,7 +13666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a2417a5c5b9bd42bd4ce0775bc0bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialBGM: {fileID: 11400000, guid: 919f01c8b6953504aa277923e67f6655, type: 2}
+  initialBGM: {fileID: 11400000, guid: 659ed819f37f3cf4185abe5435f6add0, type: 2}
 --- !u!82 &1117640889
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14452,12 +14452,12 @@ MonoBehaviour:
   - audio: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
     activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: 1a0280e1ba923aa4aad356cbb313becd, type: 2}
     tileEvent: {fileID: 2022971252}
-  - audio: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
+  - audio: {fileID: 11400000, guid: f434b1a3bf434ef478500789bc25c5ad, type: 2}
     activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: 88a932217426b18459ecd4072ad2fbcf, type: 2}
     tileEvent: {fileID: 1456800335}
   size: {x: 5, y: 5}
   prefab: {fileID: 4792496547060548034, guid: f7cf4ad28423cde4db030f9a508ab705, type: 3}
@@ -14966,7 +14966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -15115,15 +15115,15 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   objectives:
-  - audio: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
+  - audio: {fileID: 11400000, guid: 8d5cf8f42c99151439afff9bd4021aa0, type: 2}
     activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: a02194e61e5af4e4b97119b1c3f93fec, type: 2}
     tileEvent: {fileID: 1584261933}
-  - audio: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
+  - audio: {fileID: 11400000, guid: 948833ee6cbee8944a667e6db2c17cc4, type: 2}
     activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: 9b849a9e0451c7248b63d76c6036dbf1, type: 2}
     tileEvent: {fileID: 2128523927}
   size: {x: 5, y: 5}
   prefab: {fileID: 4792496547060548034, guid: f7cf4ad28423cde4db030f9a508ab705, type: 3}
@@ -15416,15 +15416,15 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   objectives:
-  - audio: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
-    activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
+  - audio: {fileID: 11400000, guid: 86e4b11b745b775498063afcddd1a85c, type: 2}
+    activeTexture: {fileID: 0}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: ee3b31cd70a52ce4b8f94b091f956604, type: 2}
     tileEvent: {fileID: 1213289797}
-  - audio: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
-    activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
+  - audio: {fileID: 11400000, guid: 689e67914b58020408de9811472eed8e, type: 2}
+    activeTexture: {fileID: 0}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: 0aac4134d3da38a4988166ee2330d12b, type: 2}
     tileEvent: {fileID: 430533679}
   size: {x: 5, y: 5}
   prefab: {fileID: 4792496547060548034, guid: f7cf4ad28423cde4db030f9a508ab705, type: 3}
@@ -17884,7 +17884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -18999,7 +18999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -19475,7 +19475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -24653,7 +24653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -24981,15 +24981,15 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   objectives:
+  - audio: {fileID: 11400000, guid: 5ccfa220c087ac444adbae9c4ee70b21, type: 2}
+    activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
+    highlightTimer: 1
+    BGMChange: {fileID: 11400000, guid: 8ab12a0a7419438458dbd8e9d754dcc8, type: 2}
+    tileEvent: {fileID: 1546754634}
   - audio: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
     activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
     highlightTimer: 1
-    BGMChange: {fileID: 0}
-    tileEvent: {fileID: 1546754634}
-  - audio: {fileID: 11400000, guid: 125c068669d4e17419ead72ff10a76b1, type: 2}
-    activeTexture: {fileID: 2800000, guid: fd641139b366d2f4aa014c51f78efeb5, type: 3}
-    highlightTimer: 1
-    BGMChange: {fileID: 0}
+    BGMChange: {fileID: 11400000, guid: 4b162cd0da69fac488568ed81dc939c4, type: 2}
     tileEvent: {fileID: 554747641}
   size: {x: 5, y: 5}
   prefab: {fileID: 4792496547060548034, guid: f7cf4ad28423cde4db030f9a508ab705, type: 3}
@@ -26552,7 +26552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb86f15c1620184ca28864849e2b917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFile: {fileID: 11400000, guid: 9d5790c962541b4479de0c0e7b487132, type: 2}
+  audioFile: {fileID: 0}
   highlightDuration: 1
   action:
     m_PersistentCalls:
@@ -27121,24 +27121,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 54057233, guid: f4c467fc62254c94185084168155cc01, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8647137005952589808, guid: f4c467fc62254c94185084168155cc01, type: 3}
-      propertyPath: spawnPosition
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8647137005952589809, guid: f4c467fc62254c94185084168155cc01, type: 3}
       propertyPath: shadow
       value: 
       objectReference: {fileID: 446063135}
     - target: {fileID: 8647137005952589811, guid: f4c467fc62254c94185084168155cc01, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8647137005952589811, guid: f4c467fc62254c94185084168155cc01, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8647137005952589816, guid: f4c467fc62254c94185084168155cc01, type: 3}

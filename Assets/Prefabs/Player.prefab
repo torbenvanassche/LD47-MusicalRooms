@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 54057233}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,9 +280,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1036dd91a676c494989cd09717dc8417, type: 2}
   - {fileID: 11400000, guid: f5d4fc452d3524c44ad371136be89c11, type: 2}
   - {fileID: 11400000, guid: 4f418707e6575b441a337c5568870178, type: 2}
-  - {fileID: 11400000, guid: 7721c757c3ec5934682519888dcd3470, type: 2}
-  - {fileID: 11400000, guid: 6f7a574d33833d947af3d8078464d75d, type: 2}
-  delay: 0
+  - {fileID: 11400000, guid: 296c9b70d585c734ebd0b1bc342d3213, type: 2}
+  - {fileID: 11400000, guid: 891e811dc854c744b99b1f6a7ae36ea1, type: 2}
 --- !u!114 &8647137005952589819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +306,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
