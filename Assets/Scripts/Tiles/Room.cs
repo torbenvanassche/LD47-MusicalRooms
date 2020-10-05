@@ -9,12 +9,15 @@ using Random = UnityEngine.Random;
 public class Container
 {
     public AudioFileSettings audio;
-    public TileEvent tileEvent;
+    [HideInInspector] public TileEvent tileEvent = null;
+    public Texture2D activeTexture = null;
+    public float highlightTimer = 1;
+    public AudioFileSettings BGM;
 }
 
 public class Room : SerializedMonoBehaviour
 {
-    [TableList(AlwaysExpanded = true)] public Stack<Container> objectives = new Stack<Container>();
+    [TableList(AlwaysExpanded = true)] public List<Container> objectives = new List<Container>();
     
     public Vector2Int size = new Vector2Int(5, 5);
     public GameObject prefab = null;
@@ -24,26 +27,49 @@ public class Room : SerializedMonoBehaviour
     private bool isCompleted = false;
 
     [HideInInspector] public List<Texture2D> tiles = new List<Texture2D>();
-    [HideInInspector] public int noteAmount = 1;
 
-    private void Start()
+    public void Start()
     {
         foreach (var objective in objectives)
         {
             if (!objective.tileEvent)
             {
                 var options = transform.GetComponentsInChildren<TileEvent>();
-                objective.tileEvent = options[Random.Range(0, options.Length)];
+
+                while (true)
+                {
+                    var index = Random.Range(0, options.Length);
+                    if(!options[index].audioFile)
+                    {
+                        objective.tileEvent = options[index];
+                        objective.tileEvent.audioFile = objective.audio;
+                        objective.tileEvent.highlightDuration = objective.highlightTimer;
+                        objective.tileEvent.activeTexture = objective.activeTexture;
+                        break;
+                    }
+                }
             }
         }
+    }
+
+    public void ValidateOrder(TileEvent tileEvent)
+    {
+        if (objectives[0].tileEvent == tileEvent)
+        {
+            objectives.RemoveAt(0);
+            tileEvent.completed = true;
+        }
+    }
+
+    [Button] private void ShowNext()
+    {
+        if(Application.isPlaying) objectives[0].tileEvent.ChangeMaterial(Texture2D.redTexture);
     }
     
     public void IsCompleted()
     {
-        isCompleted = transform.GetComponentsInChildren<TileEvent>()
-            .Where(x => !x.completed)
-            .ToList().Count == 0;
-
+        isCompleted = objectives.Count == 0;
+        
         if (isCompleted)
         {
             door.Open();
@@ -54,7 +80,12 @@ public class Room : SerializedMonoBehaviour
     //Generate room
     public void DestroyRoom()
     {
-        foreach (Transform tileEntity in transform) DestroyImmediate(tileEntity);
+        if (tiles.All(x => x == null)) return;
+        for (var i = transform.childCount - 1; i >= 0; i--)
+        {
+            DestroyImmediate(transform.GetChild(i).gameObject);
+        }
+        
         tiles.Clear();
         
         while (size.x * size.y > tiles.Count)
@@ -123,7 +154,7 @@ public class Room : SerializedMonoBehaviour
         
         gameObject.transform.position = oldPos;
         
-        for (var i = 0; i < noteAmount; i++)
+        for (var i = 0; i < objectives.Count; i++)
         {
             Randomize();
         }

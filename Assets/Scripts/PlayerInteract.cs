@@ -18,10 +18,9 @@ public class PlayerInteract : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, Vector3.down, out var hit))
             {
-                if (hit.transform.gameObject.TryGetComponent<TileEvent>(out var tileEvent))
+                if (hit.transform.gameObject.TryGetComponent<TileEvent>(out var tileEvent) && tileEvent.interactable)
                 {
                     tileEvent.action.Invoke();
-                    Manager.Instance.currentRoom.IsCompleted();
                 }
             }
         };

@@ -52,8 +52,13 @@ public class AudioManager : MonoBehaviour
         sources.Remove(t);
     }
 
-    private AudioSource GetAvailableSource()
+    private AudioSource GetAvailableSource(AudioFileSettings audio)
     {
+        if (sources.Exists(source => source.isPlaying && source.clip != audio.clip))
+        {
+            return null;
+        }
+        
         var notPlaying = sources.FindAll(source => !source.isPlaying);
         for (var index = 0; index < notPlaying.Count; index++)
         {
@@ -62,10 +67,10 @@ public class AudioManager : MonoBehaviour
             DestroySource(t);
         }
         
-        //if no audiosources, return a new one
         if (notPlaying.Count == 0)
         {
             var source = soundSourceContainer.AddComponent<AudioSource>();
+            source.playOnAwake = false;
             sources.Add(source);
             return source;
         }
@@ -75,15 +80,18 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(AudioFileSettings audio)
     {
-        var source = GetAvailableSource();
+        var source = GetAvailableSource(audio);
+
+        if (source)
+        {
+            source.clip = audio.clip;
+            source.volume = audio.Volume;
+            source.pitch = audio.Pitch;
+            source.priority = audio.Priority;
+            source.loop = audio.Loop;
         
-        source.clip = audio.clip;
-        source.volume = audio.Volume;
-        source.pitch = audio.Pitch;
-        source.priority = audio.Priority;
-        source.loop = audio.Loop;
-        
-        source.Play();
+            source.Play();   
+        }
     }
 
     public void Awake()
