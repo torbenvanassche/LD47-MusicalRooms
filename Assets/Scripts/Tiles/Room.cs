@@ -54,7 +54,7 @@ public class Room : SerializedMonoBehaviour
 
     public void ValidateOrder(TileEvent tileEvent)
     {
-        if (objectives[0].tileEvent == tileEvent)
+        if (objectives.Count != 0 && objectives[0].tileEvent == tileEvent)
         {
             objectives.RemoveAt(0);
             tileEvent.completed = true;
@@ -70,7 +70,7 @@ public class Room : SerializedMonoBehaviour
     {
         isCompleted = objectives.Count == 0;
         
-        if (isCompleted)
+        if (isCompleted && door)
         {
             door.Open();
             Manager.Instance.rooms.Next();
