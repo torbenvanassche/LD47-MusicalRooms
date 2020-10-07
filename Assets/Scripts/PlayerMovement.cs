@@ -12,9 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 outDir;
     private Player player = null;
     private GameObject target = null;
+    public bool sprinting = false;
     
     [SerializeField] private float movementSpeed = 10f;
-    [SerializeField] private Transform spawnPosition = null;
+    [SerializeField] public float sprintModifier = 1.5f;
+    
+    [SerializeField, Space] private Transform spawnPosition = null;
     
     private IEnumerator Start()
     {
@@ -35,6 +38,16 @@ public class PlayerMovement : MonoBehaviour
             player.rig.velocity = moveInput;
         };
 
+        Player.Controls.Player.Sprint.performed += context =>
+        {
+            sprinting = true;
+        };
+
+        Player.Controls.Player.Sprint.canceled += context =>
+        {
+            sprinting = false;
+        };
+
         if (spawnPosition)
         {
             Move(spawnPosition.position);
@@ -51,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y = 0;
 
             outDir = moveDirection.normalized * movementSpeed;
+            if (sprinting) outDir *= sprintModifier;
+            
 
             if (target)
             {

@@ -114,7 +114,8 @@ public class PlayerAnimator : SerializedMonoBehaviour
             footstepSource.priority = audio.Priority;
             footstepSource.loop = audio.Loop;
             footstepSource.mute = muteFootsteps;
-        
+            footstepSource.outputAudioMixerGroup = audio.mixerGroup;
+
             footstepSource.Play();   
         }
     }
@@ -136,7 +137,10 @@ public class PlayerAnimator : SerializedMonoBehaviour
                     continue;
                 }
             }
-            yield return new WaitForSeconds(Time.deltaTime * 10);
+            
+            var delay = 10 * Time.deltaTime;
+            if (GetComponent<PlayerMovement>().sprinting) delay *= GetComponent<PlayerMovement>().sprintModifier;
+            yield return new WaitForSeconds(delay);
         }
     }
 }

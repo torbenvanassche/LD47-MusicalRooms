@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class BGM : MonoBehaviour
@@ -41,6 +39,7 @@ public class BGM : MonoBehaviour
         source.pitch = audio.Pitch;
         source.priority = audio.Priority;
         source.loop = true;
+        source.outputAudioMixerGroup = audio.mixerGroup;
         
         source.Play();
     }

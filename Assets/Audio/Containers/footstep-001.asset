@@ -22,6 +22,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   clip: {fileID: 8300000, guid: edbe30f7a60cbba41a51639959fd507b, type: 3}
+  mixerGroup: {fileID: 24300002, guid: 3ea5c076f9a0add48b7ff4badd01d09a, type: 2}
   Priority: 128
   Volume: 0.079
   Pitch: 1

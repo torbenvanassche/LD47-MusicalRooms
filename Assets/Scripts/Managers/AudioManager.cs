@@ -1,101 +1,96 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    [Space, InlineEditor(InlineEditorObjectFieldModes.Hidden), ShowIf(nameof(IsPlaying))]public AudioContainer audioContainer = null;
-    private List<AudioSource> sources = new List<AudioSource>();
-    private GameObject soundSourceContainer = null;
+    [Space, InlineEditor(InlineEditorObjectFieldModes.Hidden)]public AudioContainer audioContainer = null;
+    [ReadOnly] private List<AudioSource> _sources = new List<AudioSource>();
+    private GameObject _soundSourceContainer = null;
 
-    private void RemoveSource(AudioSource a)
-    {
-        soundSourceContainer.GetComponents<AudioSource>().Where(x => x == a).ForEach(DestroySource);
-    }
+    [SerializeField] private AudioMixerGroup mixer;
 
-    private bool IsPlaying()
-    {
-        return !Application.isPlaying;
-    }
-
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
+    private string _assetPath = "Assets/Audio/AudioData.asset";
     private void Reset()
     {
-        audioContainer = AssetDatabase.LoadAssetAtPath<AudioContainer>("Assets/AudioData.asset");
+        audioContainer = AssetDatabase.LoadAssetAtPath<AudioContainer>(_assetPath);
+        if (!audioContainer)
+        {
+            audioContainer = ScriptableObject.CreateInstance<AudioContainer>();
+            AssetDatabase.CreateAsset(audioContainer, _assetPath);
+        }
     }
-    #endif
+#endif
 
     private void DestroySource(AudioSource t)
     {
-        if (Application.isPlaying)
-        {
-            Destroy(t);   
-        }
-        else
-        {
-            DestroyImmediate(t);
-        }
-        
-        sources.Remove(t);
+        _sources.Remove(t);
+        DestroyImmediate(t);
     }
 
-    private AudioSource GetAvailableSource(AudioFileSettings audio)
+    public void SetMasterVolume(float amount)
     {
-        if (sources.Exists(source => source.isPlaying && source.clip != audio.clip))
+        mixer.audioMixer.SetFloat("MasterVolume", amount);
+    }
+
+    private AudioSource GetAvailableSource(AudioFileSettings file)
+    {
+        //return null if the sound provided is already playing
+        if (_sources.Exists(source => source.isPlaying && source.clip != file.clip))
         {
             return null;
         }
         
-        var notPlaying = sources.FindAll(source => !source.isPlaying);
+        //gather the sources that are not playing
+        var notPlaying = _sources.FindAll(source => !source.isPlaying);
         for (var index = 0; index < notPlaying.Count; index++)
         {
             var t = notPlaying[index];
             notPlaying.Remove(t);
             DestroySource(t);
         }
-        
-        if (notPlaying.Count == 0)
+
+        if (notPlaying.Count != 0) return notPlaying[0];
         {
-            var source = soundSourceContainer.AddComponent<AudioSource>();
+            var source = _soundSourceContainer.AddComponent<AudioSource>();
             source.playOnAwake = false;
-            sources.Add(source);
+            _sources.Add(source);
             return source;
         }
 
-        return notPlaying[0];
     }
 
-    public void PlaySound(AudioFileSettings audio)
+    public void PlaySound(AudioFileSettings file)
     {
-        var source = GetAvailableSource(audio);
-
-        if (source)
-        {
-            source.clip = audio.clip;
-            source.volume = audio.Volume;
-            source.pitch = audio.Pitch;
-            source.priority = audio.Priority;
-            source.loop = audio.Loop;
+        var source = GetAvailableSource(file);
+        if (!source) return;
         
-            source.Play();   
-        }
+        source.clip = file.clip;
+        source.outputAudioMixerGroup = file.mixerGroup;
+        
+        source.volume = file.Volume;
+        source.pitch = file.Pitch;
+        source.priority = file.Priority;
+        source.loop = file.Loop;
+        source.outputAudioMixerGroup = file.mixerGroup;
+
+        
+        source.Play();
     }
 
-    public void StopSound(AudioFileSettings audio)
+    public void StopSound(AudioFileSettings file)
     {
-        var sound = sources.Where(x => x.clip == audio.clip);
-        foreach (var audioSource in sound)
-        {
-            Destroy(audioSource);
-        }
+        var sound = _sources.Where(x => x.clip == file.clip);
+        foreach (var audioSource in sound) Destroy(audioSource);
     }
 
     public void Awake()
     {
-        soundSourceContainer = new GameObject {name = "SoundPlayer"};
-        soundSourceContainer.transform.SetParent(transform);
+        _soundSourceContainer = new GameObject {name = "SoundPlayer"};
+        _soundSourceContainer.transform.SetParent(transform);
     }
 }

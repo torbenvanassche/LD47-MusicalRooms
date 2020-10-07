@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 9116263594187819734}
   rooms: {fileID: 9116263594187819732}
+  bgmPlayer: {fileID: 0}
   currentRoom: {fileID: 0}
   camera: {fileID: 0}
   player: {fileID: 0}
@@ -62,10 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c206cf23461511648bfe0dffb080665e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected: {fileID: 0}
   audioContainer: {fileID: 11400000, guid: e16b64ebc6b350e4b976f676fccf0529, type: 2}
-  sources: []
-  soundSourceContainer: {fileID: 0}
+  mixer: {fileID: 24300002, guid: 3ea5c076f9a0add48b7ff4badd01d09a, type: 2}
 --- !u!114 &9116263594187819732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,5 +86,3 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Rooms:
-  - {fileID: 0}
