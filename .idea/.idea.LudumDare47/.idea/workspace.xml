@@ -20,43 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125074e0-19c7-497a-8577-944e6bfeb6bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_C.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_C.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CD.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDEF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDEF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDEFG.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDEFG.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDEFGA.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_CDEFGA.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_bare.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_bare.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_full.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_full.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_verybase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_loop_verybase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/LD_upbeat-002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/LD_upbeat-002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/door_open.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/door_open.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-005.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-005.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-006.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/footstep-006.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/menu_beep.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/menu_beep.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/menu_click.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/menu_click.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_A.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_A.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_B.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_B.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_C.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_C.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_D.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_E.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_E.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_F.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_F.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_G.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_G.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Containers/tile_bass.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Containers/tile_bass.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSettings.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSettings.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioFileSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioFileSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/BGM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/BGM.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare47/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FlatWall.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/ButtonHover-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Menu/ButtonHover-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu/MainMenuAnimation-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Menu/MainMenuAnimation-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Back-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Back-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Front-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Front-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Idle-Shee-revt.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Idle-Shee-revt.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Idle-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Idle-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Left-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Left-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Right-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Right-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,25 +52,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SceneManagement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tiles/RoomTileContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/RoomManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/67055F1B-E365-4E2A-9872-54D5437EE5B8/b2/8b70a80d/InspectorElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tiles/Door.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/RoomContainerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/AudioContainerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/67055F1B-E365-4E2A-9872-54D5437EE5B8/b2/8b70a80d/InspectorElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tiles/Room.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/3e/c63cafc5/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Restart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIE/SelectableVisualElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OrientShadow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Restart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/3e/c63cafc5/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tiles/RoomTileContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SceneManagement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ImageAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/RoomContainerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIE/HoverButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimationContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -157,8 +145,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -166,8 +155,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -191,12 +181,14 @@
       <workItem from="1601884687219" duration="31550000" />
       <workItem from="1601932494153" duration="1630000" />
       <workItem from="1602097035926" duration="1710000" />
+      <workItem from="1643810874963" duration="19094000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">

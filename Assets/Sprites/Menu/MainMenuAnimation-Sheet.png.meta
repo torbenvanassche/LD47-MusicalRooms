@@ -90,6 +90,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -98,9 +99,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -121,6 +122,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -194,7 +197,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 89804659219804570800000000000000
-      internalID: 8448903613855828120
+      internalID: 8932528173109155306
       vertices: []
       indices: 
       edges: []
@@ -215,7 +218,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 46aa757e7145e4720800000000000000
-      internalID: 2832293677304883812
+      internalID: 8814163408346247010
       vertices: []
       indices: 
       edges: []
@@ -236,7 +239,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 83c0e044629f24b10800000000000000
-      internalID: 1964406330232802360
+      internalID: 6044829864563034331
       vertices: []
       indices: 
       edges: []
@@ -257,7 +260,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 02d0dfbfb6c2c17c0800000000000000
-      internalID: -4099352718513205984
+      internalID: 2841630683018520664
       vertices: []
       indices: 
       edges: []
@@ -278,7 +281,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 11686c351d871b080800000000000000
-      internalID: -9173418125527972335
+      internalID: -8680036948751491167
       vertices: []
       indices: 
       edges: []
@@ -299,7 +302,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 137e4969d49a4e4c0800000000000000
-      internalID: -4259093196881729743
+      internalID: 4878754364418514119
       vertices: []
       indices: 
       edges: []
@@ -320,7 +323,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7ae97f4d93e925ad0800000000000000
-      internalID: -2714933654127665497
+      internalID: -1157977563308393052
       vertices: []
       indices: 
       edges: []
@@ -341,7 +344,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 338994d69921218c0800000000000000
-      internalID: -4030138266370336717
+      internalID: 855601554570947620
       vertices: []
       indices: 
       edges: []
@@ -362,7 +365,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2979fe6aedc2e0f00800000000000000
-      internalID: 1084853895037949842
+      internalID: 3483565419101978972
       vertices: []
       indices: 
       edges: []
@@ -383,7 +386,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f0baedac9e7649030800000000000000
-      internalID: 3500537064202349327
+      internalID: 3421413855009378369
       vertices: []
       indices: 
       edges: []
@@ -404,7 +407,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 17abdce53aefe9470800000000000000
-      internalID: 8403433932343589489
+      internalID: 5489419785072497044
       vertices: []
       indices: 
       edges: []
@@ -419,6 +422,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MainMenuAnimation-Sheet_0: 8932528173109155306
+      MainMenuAnimation-Sheet_5: 4878754364418514119
+      MainMenuAnimation-Sheet_4: -8680036948751491167
+      MainMenuAnimation-Sheet_8: 3483565419101978972
+      MainMenuAnimation-Sheet_10: 5489419785072497044
+      MainMenuAnimation-Sheet_9: 3421413855009378369
+      MainMenuAnimation-Sheet_2: 6044829864563034331
+      MainMenuAnimation-Sheet_3: 2841630683018520664
+      MainMenuAnimation-Sheet_7: 855601554570947620
+      MainMenuAnimation-Sheet_1: 8814163408346247010
+      MainMenuAnimation-Sheet_6: -1157977563308393052
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

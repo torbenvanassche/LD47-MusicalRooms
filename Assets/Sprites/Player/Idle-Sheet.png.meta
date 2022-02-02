@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,8 +64,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -85,6 +86,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -146,7 +149,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c7011185cf7854160800000000000000
-      internalID: 7009157912951066748
+      internalID: -3145328045451892686
       vertices: []
       indices: 
       edges: []
@@ -167,7 +170,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 650664adae0e32e70800000000000000
-      internalID: 9089355772252807254
+      internalID: -6552843917330368855
       vertices: []
       indices: 
       edges: []
@@ -188,7 +191,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f44ebd3e2f0c77350800000000000000
-      internalID: 6014487976814044239
+      internalID: 7309844833446704383
       vertices: []
       indices: 
       edges: []
@@ -209,7 +212,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 99f90606b9bbe0f00800000000000000
-      internalID: 1085010836254138265
+      internalID: -1701584443341091289
       vertices: []
       indices: 
       edges: []
@@ -230,7 +233,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 280dbf7fa6d613880800000000000000
-      internalID: -8632998704498093950
+      internalID: 4619437029804489033
       vertices: []
       indices: 
       edges: []
@@ -245,6 +248,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Idle-Sheet_1: -6552843917330368855
+      Idle-Sheet_0: -3145328045451892686
+      Idle-Sheet_3: -1701584443341091289
+      Idle-Sheet_4: 4619437029804489033
+      Idle-Sheet_2: 7309844833446704383
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
