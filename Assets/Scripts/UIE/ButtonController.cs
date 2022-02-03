@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
@@ -12,22 +13,22 @@ namespace UIE
 
         protected override IEnumerable GetElements()
         {
-            return GetVisualElementsOfType<HoverButton>();
+            return GetVisualElementsOfType<Button>();
         }
 
-        protected override void Initialize()
+        protected void Awake()
         {
-            element?.RegisterCallback<PointerDownEvent>((evt) =>
+            Element.RegisterCallback<PointerDownEvent>((evt) =>
             {
                 pointerDownEvent.Invoke();
             });
             
-            element?.RegisterCallback<PointerEnterEvent>((evt) =>
+            Element.RegisterCallback<PointerEnterEvent>((evt) =>
             {
                 pointerEnterEvent.Invoke();
             });
             
-            element?.RegisterCallback<PointerLeaveEvent>((evt) =>
+            Element.RegisterCallback<PointerLeaveEvent>((evt) =>
             {
                 pointerLeaveEvent.Invoke();
             });

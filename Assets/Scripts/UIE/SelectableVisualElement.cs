@@ -12,10 +12,21 @@ namespace UIE
         [ValueDropdown(nameof(GetElements)), OnValueChanged(nameof(SetElement))]
         public string id;
     
-        protected VisualElement element;
+        private VisualElement element;
+        protected VisualElement Element
+        {
+            get
+            {
+                if (element == null)
+                {
+                    SetElement();
+                }
+                return element;
+            }
+            set => element = value;
+        }
 
         protected abstract IEnumerable GetElements();
-        protected abstract void Initialize();
 
         protected IEnumerable GetVisualElementsOfType<T>() where T : VisualElement
         {
@@ -33,16 +44,6 @@ namespace UIE
         protected void SetElement()
         {
             element = target.rootVisualElement.Query<VisualElement>(id);
-        }
-
-        private void Awake()
-        {
-            //Failsafe set element
-            if (element == null) SetElement();
-            
-            //If the element is not found, exit initialization
-            if (element == null) return;
-            Initialize();
         }
     }
 }

@@ -15,14 +15,14 @@ public class ShowConditional : SelectableVisualElement
         return GetVisualElementsOfType<VisualElement>();
     }
 
-    public void CheckWebGL()
+    public void IsNotWebGL()
     {
-        show = Application.platform == RuntimePlatform.WebGLPlayer;
+        show = Application.platform != RuntimePlatform.WebGLPlayer;
     }
 
-    protected override void Initialize()
+    void Awake()
     {
         condition?.Invoke();
-        element.style.visibility = show ? Visibility.Visible : Visibility.Hidden;
+        Element.style.visibility = show ? Visibility.Visible : Visibility.Hidden;
     }
 }
