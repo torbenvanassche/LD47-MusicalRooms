@@ -1,9 +1,8 @@
 using System.Collections;
-using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
-namespace UIE
+namespace AntiProton.UIE
 {
     public class ButtonController : SelectableVisualElement
     {

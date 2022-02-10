@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="Button">
+        <ui:VisualElement name="Image" class="image-square-50 bg" />
+        <ui:Label text="Label" display-tooltip-when-elided="true" class="text-regular" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,23 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/styles.uss?fileID=7433441132597879392&amp;guid=e7ce0951948b42f4995ef45eeebca0cd&amp;type=3#styles" />
-    <ui:Label text="Sound Pather" display-tooltip-when-elided="true" name="Title" class="ui-title" />
-    <ui:VisualElement name="Menu" style="right: 15%; position: absolute; top: 30%; bottom: 20%; -unity-text-align: upper-left; align-items: flex-start; justify-content: space-between;">
-        <UIE.Button focusable="true" style="flex-direction: row;">
-            <ui:VisualElement name="Image" />
-            <ui:Label text="Start" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;project://database/Assets/KenPixel%20Mini%20SDF.asset?fileID=11400000&amp;guid=22209f9606e3d0d4290fa38cc5abfd9e&amp;type=2#KenPixel Mini SDF&apos;); -unity-font-style: normal; font-size: 35px; -unity-text-align: upper-center; white-space: nowrap; margin-left: 12px; color: rgb(255, 255, 255); margin-top: 0; padding-top: 0;" />
-        </UIE.Button>
-        <UIE.Button focusable="true" style="flex-direction: row;">
-            <ui:VisualElement name="Image" />
-            <ui:Label text="Settings" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;project://database/Assets/KenPixel%20Mini%20SDF.asset?fileID=11400000&amp;guid=22209f9606e3d0d4290fa38cc5abfd9e&amp;type=2#KenPixel Mini SDF&apos;); -unity-font-style: normal; font-size: 35px; -unity-text-align: upper-center; white-space: nowrap; margin-left: 12px; color: rgb(255, 255, 255); margin-top: 0; padding-top: 0;" />
-        </UIE.Button>
-        <UIE.Button focusable="true" style="flex-direction: row;">
-            <ui:VisualElement name="Image" />
-            <ui:Label text="Credits" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;project://database/Assets/KenPixel%20Mini%20SDF.asset?fileID=11400000&amp;guid=22209f9606e3d0d4290fa38cc5abfd9e&amp;type=2#KenPixel Mini SDF&apos;); -unity-font-style: normal; font-size: 35px; -unity-text-align: upper-center; white-space: nowrap; margin-left: 12px; color: rgb(255, 255, 255); margin-top: 0; padding-top: 0;" />
-        </UIE.Button>
-        <UIE.Button focusable="true" style="flex-direction: row;">
-            <ui:VisualElement name="Image" />
-            <ui:Label text="Quit" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;project://database/Assets/KenPixel%20Mini%20SDF.asset?fileID=11400000&amp;guid=22209f9606e3d0d4290fa38cc5abfd9e&amp;type=2#KenPixel Mini SDF&apos;); -unity-font-style: normal; font-size: 35px; -unity-text-align: upper-center; white-space: nowrap; margin-left: 12px; color: rgb(255, 255, 255); margin-top: 0; padding-top: 0;" />
-        </UIE.Button>
-    </ui:VisualElement>
+    <Style src="project://database/Assets/UI%20Toolkit/antiproton-default.uss?fileID=7433441132597879392&amp;guid=e7ce0951948b42f4995ef45eeebca0cd&amp;type=3#antiproton-default" />
+    <ui:Label text="Sound Pather" display-tooltip-when-elided="true" name="Title" class="text-title" />
     <ui:VisualElement style="width: 350px; height: 350px; align-items: auto; justify-content: flex-start; left: 5%; top: 10%; display: none;" />
+    <AntiProton.UIE.Menu class="menu-half">
+        <ui:VisualElement name="Button">
+            <ui:VisualElement name="Image" class="image-square-50 bg" />
+            <ui:Label text="Start" display-tooltip-when-elided="true" class="text-regular" />
+        </ui:VisualElement>
+    </AntiProton.UIE.Menu>
 </ui:UXML>

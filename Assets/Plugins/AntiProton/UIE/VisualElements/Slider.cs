@@ -2,19 +2,19 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UIE
+namespace AntiProton.UIE
 {
-    public class Slider : VisualElement
+    public class Slider : DraggableVisualElement
     {
         private VisualElement content;
         
         public new class UxmlFactory : UxmlFactory<Slider, UxmlTraits> { }
         public new class UxmlTraits : VisualElement.UxmlTraits
         {
-            UxmlIntAttributeDescription Progress =
+            private UxmlIntAttributeDescription Progress =
                 new () { name = "fill-percentage", defaultValue = 0 };
-            
-            UxmlColorAttributeDescription FillColor = 
+
+            private UxmlColorAttributeDescription FillColor = 
                 new () { name = "fill-color", defaultValue = Color.black };
             
             public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
@@ -30,7 +30,7 @@ namespace UIE
         public Slider()
         {
             focusable = true;
-            AddToClassList("default-slider");
+            AddToClassList("antiproton-slider");
 
             content = new VisualElement
             {
@@ -41,6 +41,14 @@ namespace UIE
                 }
             };
             Add(content);
+        }
+
+        protected override void OnDrag(PointerMoveEvent evt)
+        {
+            var width = worldBound.xMax - worldBound.xMin;
+            var fillRate = evt.position.x - worldBound.xMin;
+            var diff = fillRate / width;
+            fillPercentage = Mathf.RoundToInt(diff * 100);
         }
 
         private int fill = 0;

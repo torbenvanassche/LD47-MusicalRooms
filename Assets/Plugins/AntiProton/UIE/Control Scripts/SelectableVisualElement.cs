@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UIE
+namespace AntiProton.UIE
 {
     public abstract class SelectableVisualElement : SerializedMonoBehaviour
     {

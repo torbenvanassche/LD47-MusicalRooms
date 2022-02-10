@@ -3,6 +3,6 @@
     <ui:Label text="Settings" display-tooltip-when-elided="true" class="ui-title" />
     <ui:VisualElement style="flex-direction: row; margin-left: 10%; margin-right: 10%;">
         <ui:Label text="Volume" display-tooltip-when-elided="true" class="ui-text" style="margin-right: 15px;" />
-        <UIE.Slider focusable="true" fill-percentage="50" fill-color="#000000FF" name="Volume" />
+        <AntiProton.UIE.Slider focusable="true" fill-percentage="33" />
     </ui:VisualElement>
 </ui:UXML>
